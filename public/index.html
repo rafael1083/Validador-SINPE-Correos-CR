@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador SINPES</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #1a1a1a; color: #e0e0e0; display: flex; height: 100vh; }
+        .main-wrapper { display: flex; width: 100%; }
+        .sidebar { width: 280px; background: #222; border-right: 1px solid #333; padding: 20px; overflow-y: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .sidebar h2 { font-size: 14px; color: #888; text-transform: uppercase; margin-bottom: 15px; font-weight: 600; }
+        .project-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px; margin-bottom: 8px; background: #2a2a2a; border: 1px solid #333; border-radius: 6px; cursor: pointer; text-align: left; font-size: 14px; transition: all 0.2s; color: #ccc; min-height: 60px; }
+        .project-btn img { height: 50px; width: 50px; object-fit: contain; flex-shrink: 0; background: white; padding: 4px; border-radius: 4px; }
+        .project-btn:hover { background: #333; border-color: #0099ff; color: #fff; }
+        .project-btn:hover img { background: #0099ff; }
+        .project-btn.active { background: #0066cc; color: white; border-color: #0099ff; font-weight: 600; }
+        .project-btn.active img { background: white; border: 2px solid white; }
+        .project-name { font-weight: 600; }
+        .content { flex: 1; display: flex; flex-direction: column; padding: 20px; overflow: hidden; background: #1a1a1a; }
+        .header { margin-bottom: 20px; }
+        h1 { color: #fff; margin-bottom: 10px; }
+        .tabs { display: flex; gap: 10px; border-bottom: 1px solid #333; margin-bottom: 20px; }
+        .tab-button { padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; color: #aaa; }
+        .tab-button:hover { color: #fff; }
+        .tab-button.active { border-bottom-color: #0099ff; color: #0099ff; }
+        .tab-content { display: none; flex: 1; overflow-y: auto; }
+        .tab-content.active { display: flex; flex-direction: column; }
+        table { width: 100%; border-collapse: collapse; background: #242424; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #333; color: #e0e0e0; }
+        th { background: #2a2a2a; font-weight: 600; color: #fff; }
+        tr:hover { background: #2f2f2f; }
+        .config-form { background: #242424; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #333; border-radius: 4px; font-family: monospace; background: #1a1a1a; color: #e0e0e0; }
+        button { padding: 10px 20px; background: #0099ff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
+        button:hover { background: #0077cc; }
+        .project-info { background: #1a3a52; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-size: 13px; color: #a0c4ff; }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <h2>📋 Proyectos</h2>
+            <button class="project-btn active" onclick="selectProject('Etelgive')">
+                <img src="/logos/bcr.png" alt="BCR">
+                <div><div class="project-name">Etelgive</div><div style="font-size: 11px; color: #888;">BCR</div></div>
+            </button>
+            <button class="project-btn" onclick="selectProject('Multichunches')">
+                <img src="/logos/BN.png" alt="Banco Nacional">
+                <div><div class="project-name">Multichunches</div><div style="font-size: 11px; color: #888;">Banco Nacional</div></div>
+            </button>
+            <div class="project-info" style="margin-top: 20px;">
+                <strong>BCR</strong> y <strong>Banco Nacional</strong><br>transacciones SINPE Móvil
+            </div>
+            <button onclick="syncUpdateDownload()" style="margin-top: 15px; background: #00aa44; width: 100%; font-weight: bold;">🔄 Sincronizar y Descargar</button>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <h1>📧 Validador SINPES</h1>
+                <div class="tabs">
+                    <button class="tab-button active" onclick="switchTab('transactions')">Transacciones</button>
+                    <button class="tab-button" onclick="switchTab('config')">Configuración</button>
+                </div>
+            </div>
+
+            <div id="transactions" class="tab-content active">
+                <div style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button onclick="loadAllTransactions()" style="background: #0099ff;">🔍 Buscar Todos</button>
+                    <button onclick="loadWeekTransactions()" style="background: #00cc66;">📅 Esta Semana</button>
+                    <button onclick="loadMonthTransactions()" style="background: #cc00ff;">📆 Este Mes</button>
+                    <button onclick="downloadMonthCSV()" style="background: #ff6600;">⬇️ Descargar Mes</button>
+                </div>
+                <div style="margin-bottom: 15px; padding: 10px; background: #2a2a2a; border-radius: 6px; color: #00ff88; font-weight: bold;">
+                    📊 SINPES Recibidos: <span id="sinpeCount">0</span>
+                </div>
+                <table>
+                    <thead><tr><th>Fecha/Hora</th><th>Proyecto</th><th>Referencia</th><th>Teléfono</th><th>Cliente</th><th>Entidad</th><th>Monto</th><th>Motivo</th><th>Estado</th></tr></thead>
+                    <tbody id="transactionsTable"><tr><td colspan="9" style="text-align: center;">Cargando...</td></tr></tbody>
+                </table>
+            </div>
+
+            <div id="config" class="tab-content">
+                <div class="config-form">
+                    <h2 style="margin-bottom: 15px;">Credenciales IMAP</h2>
+                    <p style="color: #666; margin-bottom: 15px;">Formato: email,password,port</p>
+                    <textarea id="imapConfig" rows="6" placeholder="email@gmail.com,app_password,993"></textarea>
+                    <button onclick="alert('Requiere guardado en servidor')">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentProject = 'Etelgive';
+
+        function formatCurrency(value) {
+            const num = parseFloat(value) || 0;
+            return '¢' + num.toLocaleString('es-CR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function selectProject(project) {
+            currentProject = project;
+            document.querySelectorAll('.project-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            loadTransactions();
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+            document.getElementById(tab).classList.add('active');
+            event.target.classList.add('active');
+            if (tab === 'transactions') loadTransactions();
+        }
+
+        function formatDateTime(isoDate) {
+            const date = new Date(isoDate);
+            const d = String(date.getDate()).padStart(2, '0');
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const y = date.getFullYear();
+            const h = String(date.getHours()).padStart(2, '0');
+            const min = String(date.getMinutes()).padStart(2, '0');
+            return `${d}/${m}/${y} ${h}:${min}`;
+        }
+
+        async function loadTransactions(endpoint = '/api/transactions') {
+            try {
+                const url = endpoint.includes('?') ? `${endpoint}&project=${currentProject}` : `${endpoint}?project=${currentProject}`;
+                const response = await fetch(url);
+                const transactions = await response.json();
+                const tbody = document.getElementById('transactionsTable');
+                document.getElementById('sinpeCount').textContent = transactions.length;
+                if (transactions.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="8" style="text-align: center;">Sin transacciones</td></tr>';
+                } else {
+                    tbody.innerHTML = transactions.map(t => `
+                        <tr>
+                            <td>${formatDateTime(t.fecha)}</td>
+                            <td>${t.proyecto}</td>
+                            <td><code>${t.referencia}</code></td>
+                            <td>${t.telefonoOrigen}</td>
+                            <td>${t.nombreOrigen}</td>
+                            <td>${t.entidadOrigen}</td>
+                            <td style="text-align: right; font-weight: bold;">${formatCurrency(t.monto)}</td>
+                            <td>${t.motivo}</td>
+                            <td><small>${t.estado}</small></td>
+                        </tr>
+                    `).join('');
+                }
+            } catch (error) {
+                document.getElementById('transactionsTable').innerHTML = '<tr><td colspan="8" style="text-align: center; color: red;">Error</td></tr>';
+            }
+        }
+
+        function loadAllTransactions() {
+            loadTransactions('/api/transactions');
+        }
+
+        function loadWeekTransactions() {
+            loadTransactions('/api/transactions/week');
+        }
+
+        function loadMonthTransactions() {
+            loadTransactions('/api/transactions/month');
+        }
+
+        function downloadMonthCSV() {
+            const url = `/api/transactions/month/csv?project=${currentProject}`;
+            window.location.href = url;
+        }
+
+        function downloadWeekCSV() {
+            const url = `/api/transactions/week/csv?project=${currentProject}`;
+            window.location.href = url;
+        }
+
+        async function syncUpdateDownload() {
+            try {
+                const btn = event.target;
+                btn.disabled = true;
+                btn.textContent = '⏳ Sincronizando...';
+
+                const response = await fetch('/api/sync-csv');
+
+                if (!response.ok) throw new Error('Error en sincronización');
+
+                const data = await response.json();
+
+                btn.textContent = '✅ Sincronizado';
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = '🔄 Sincronizar y Descargar';
+                    loadTransactions();
+                }, 1500);
+            } catch (error) {
+                alert('Error: ' + error.message);
+                event.target.disabled = false;
+                event.target.textContent = '🔄 Sincronizar y Descargar';
+            }
+        }
+
+        // Socket.IO real-time listener
+        const socket = io();
+        socket.on('new-transaction', (transaction) => {
+            if (transaction.project === currentProject) {
+                loadTransactions();
+            }
+        });
+
+        loadTransactions();
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(taskkill /PID 13896 /F)",
+      "Bash(powershell -Command \"Stop-Process -Id 13896 -Force\")"
+    ]
+  }
+}
