@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\validador-sinpesXcorreos\\data\\logs\\.8b576284117f075c7d2b69ef5329652df3a25fc0-audit.json",
+    "files": [
+        {
+            "date": 1777136198960,
+            "name": "C:\\validador-sinpesXcorreos\\data\\logs\\app-2026-04-25.log",
+            "hash": "8a9a30de774930149c431524668f48ed7a4c5aabeedab3f22d094087d2b2e7e4"
+        }
+    ],
+    "hashType": "sha256"
+}

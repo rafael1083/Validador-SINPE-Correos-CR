@@ -1,0 +1,439 @@
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 10:56:39"}
+{"count":56,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 10:56:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 10:56:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 10:56:39"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 10:56:39"}
+{"lastUid":153,"level":"info","message":"Cursor inicializado al final de la bandeja","project":"Multichunches","timestamp":"2026-04-25 10:56:40"}
+{"lastUid":1626,"level":"info","message":"Cursor inicializado al final de la bandeja","project":"Etelgive","timestamp":"2026-04-25 10:56:40"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 10:56:40"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 10:56:40"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137053422","timestamp":"2026-04-25 11:10:53"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137053422","timestamp":"2026-04-25 11:10:53"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137053433","timestamp":"2026-04-25 11:10:53"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137053433","timestamp":"2026-04-25 11:10:53"}
+{"level":"info","message":"SINPE eliminado","referencia":"ETG1777137053422","timestamp":"2026-04-25 11:10:56"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137053433","timestamp":"2026-04-25 11:10:56"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137071231","timestamp":"2026-04-25 11:11:11"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137071231","timestamp":"2026-04-25 11:11:11"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137110966","timestamp":"2026-04-25 11:11:50"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137110966","timestamp":"2026-04-25 11:11:50"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137118078","timestamp":"2026-04-25 11:11:58"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137118078","timestamp":"2026-04-25 11:11:58"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137118078","timestamp":"2026-04-25 11:12:00"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137121005","timestamp":"2026-04-25 11:12:01"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137121005","timestamp":"2026-04-25 11:12:01"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137121046","timestamp":"2026-04-25 11:12:01"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137121046","timestamp":"2026-04-25 11:12:01"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137121005","timestamp":"2026-04-25 11:12:01"}
+{"level":"info","message":"SINPE eliminado","referencia":"ETG1777137121046","timestamp":"2026-04-25 11:12:02"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 11:12:02"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:12:02"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 11:12:02"}
+{"count":56,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:12:02"}
+{"count":56,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 11:12:02"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 11:12:02","total":80}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 11:12:58"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:12:58"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 11:12:58"}
+{"count":56,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:12:58"}
+{"count":56,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 11:12:58"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 11:12:58","total":80}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137712412","timestamp":"2026-04-25 11:21:52"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137712412","timestamp":"2026-04-25 11:21:52"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137718276","timestamp":"2026-04-25 11:21:58"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137718276","timestamp":"2026-04-25 11:21:58"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137718289","timestamp":"2026-04-25 11:21:58"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137718289","timestamp":"2026-04-25 11:21:58"}
+{"level":"info","message":"SINPE eliminado","referencia":"ETG1777137718276","timestamp":"2026-04-25 11:22:01"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137718289","timestamp":"2026-04-25 11:22:01"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137732917","timestamp":"2026-04-25 11:22:12"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137732917","timestamp":"2026-04-25 11:22:12"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137803128","timestamp":"2026-04-25 11:23:23"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137803128","timestamp":"2026-04-25 11:23:23"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137803128","timestamp":"2026-04-25 11:23:24"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137808874","timestamp":"2026-04-25 11:23:28"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137808874","timestamp":"2026-04-25 11:23:28"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137808874","timestamp":"2026-04-25 11:23:31"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777137811885","timestamp":"2026-04-25 11:23:31"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777137811885","timestamp":"2026-04-25 11:23:31"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"ETG1777137811916","timestamp":"2026-04-25 11:23:31"}
+{"level":"info","message":"SINPE Etelgive ficticio creado","project":"Etelgive","referencia":"ETG1777137811916","timestamp":"2026-04-25 11:23:31"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777137811885","timestamp":"2026-04-25 11:23:32"}
+{"level":"info","message":"SINPE eliminado","referencia":"ETG1777137811916","timestamp":"2026-04-25 11:23:33"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 11:23:33"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:23:33"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 11:23:33"}
+{"count":56,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:23:33"}
+{"count":56,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 11:23:33"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 11:23:33","total":80}
+{"count":1,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 11:24:41","trigger":"idle"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 11:24:41"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 11:24:53"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:24:53"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 11:24:53"}
+{"count":56,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:24:53"}
+{"count":56,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 11:24:53"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 11:24:53","total":80}
+{"count":1,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 11:27:56","trigger":"idle"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:27:56"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:27:56"}
+{"error":"Socket timeout","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: Socket timeout\n    at TLSSocket.<anonymous> (C:\\validador-sinpesXcorreos\\node_modules\\imapflow\\lib\\imap-flow.js:861:29)\n    at TLSSocket.emit (node:events:508:28)\n    at TLSSocket.emit (node:domain:489:12)\n    at TLSSocket.Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at processTimers (node:internal/timers:541:7)","timestamp":"2026-04-25 11:29:41"}
+{"level":"warn","message":"Conexión IMAP cerrada. Reconexión en 30s...","project":"Etelgive","timestamp":"2026-04-25 11:29:41"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 11:29:41"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:41:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:41:13"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 11:41:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 11:41:13"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 11:41:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 11:41:13"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 11:41:13"}
+{"count":1,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 11:41:15","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:41:15"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:41:15"}
+{"count":2,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 11:41:15","trigger":"startup"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 11:41:16"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777139110525","timestamp":"2026-04-25 11:45:10"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777139110525","timestamp":"2026-04-25 11:45:10"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777139110525","timestamp":"2026-04-25 11:45:12"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"TEST1777139116295","timestamp":"2026-04-25 11:45:16"}
+{"level":"info","message":"SINPE ficticio creado","project":"Multichunches","referencia":"TEST1777139116295","timestamp":"2026-04-25 11:45:16"}
+{"level":"info","message":"SINPE eliminado","referencia":"TEST1777139116295","timestamp":"2026-04-25 11:45:19"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 11:59:39"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 11:59:39"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 11:59:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 11:59:39"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 11:59:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 11:59:39"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 11:59:39"}
+{"count":1,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 11:59:41","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:59:41"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 11:59:41"}
+{"count":2,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 11:59:41","trigger":"startup"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 11:59:41"}
+{"error":"Socket timeout","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: Socket timeout\n    at TLSSocket.<anonymous> (C:\\validador-sinpesXcorreos\\node_modules\\imapflow\\lib\\imap-flow.js:861:29)\n    at TLSSocket.emit (node:events:508:28)\n    at TLSSocket.emit (node:domain:489:12)\n    at TLSSocket.Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at processTimers (node:internal/timers:541:7)","timestamp":"2026-04-25 12:04:41"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:04:41"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 12:04:41"}
+{"error":"Socket timeout","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: Socket timeout\n    at TLSSocket.<anonymous> (C:\\validador-sinpesXcorreos\\node_modules\\imapflow\\lib\\imap-flow.js:861:29)\n    at TLSSocket.emit (node:events:508:28)\n    at TLSSocket.emit (node:domain:489:12)\n    at TLSSocket.Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at processTimers (node:internal/timers:541:7)","timestamp":"2026-04-25 12:04:41"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:04:41"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 12:04:41"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 12:09:43"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 12:09:43"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 12:09:43"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 12:09:43"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 12:09:43"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 12:09:43"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 12:09:43"}
+{"count":3,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 12:09:45","trigger":"startup"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 12:09:45","trigger":"startup"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 12:09:45"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:09:45"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:09:45"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 12:10:33"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 12:10:33"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 12:10:34"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 12:10:34"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 12:10:34"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 12:10:34"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 12:10:34"}
+{"count":3,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 12:10:35","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:10:35"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:10:35"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 12:10:35","trigger":"startup"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 12:10:35"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 12:10:39"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 12:10:39"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 12:10:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 12:10:39"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 12:10:39"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 12:10:39"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:470:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:483:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:500:1)","timestamp":"2026-04-25 12:10:39"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 12:11:50"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 12:11:50"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 12:11:50"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 12:11:50"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 12:11:50"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 12:11:50"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 12:11:50"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 12:12:28"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 12:12:28"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 12:12:28"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 12:12:28"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 12:12:28"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 12:12:28"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 12:12:28"}
+{"count":4,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 12:12:29","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:12:30"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 12:12:30"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 12:12:30","trigger":"startup"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 12:12:31"}
+{"id":"EoTj4gsC5_zk0tNiAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:12:32"}
+{"id":"EoTj4gsC5_zk0tNiAAAB","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 12:12:46"}
+{"id":"d2sVvHIcyRiDLNzqAAAD","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:12:46"}
+{"id":"d2sVvHIcyRiDLNzqAAAD","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 12:13:36"}
+{"id":"TpHHkKiUhxTvZkVZAAAF","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:13:36"}
+{"error":"Socket timeout","level":"error","message":"Error de socket/IMAP detectado","project":"Multichunches","timestamp":"2026-04-25 12:17:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:17:30"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 12:17:30"}
+{"error":"Socket timeout","level":"error","message":"Error de socket/IMAP detectado","project":"Etelgive","timestamp":"2026-04-25 12:17:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:17:31"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 12:17:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:22:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:22:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:27:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:27:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:32:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:32:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:37:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:37:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:42:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:42:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:47:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:47:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:52:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:52:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 12:57:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 12:57:31"}
+{"id":"t3eJipLIEI7DYasaAAAH","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:58:15"}
+{"id":"t3eJipLIEI7DYasaAAAH","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 12:58:21"}
+{"id":"3FYilxaL-i_bZCFdAAAJ","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:58:21"}
+{"id":"3FYilxaL-i_bZCFdAAAJ","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 12:58:27"}
+{"id":"8JjwtRWZvugGji74AAAL","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 12:58:27"}
+{"id":"8JjwtRWZvugGji74AAAL","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 12:58:37"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:02:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:02:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:07:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:07:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:12:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:12:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:17:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:17:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:22:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:22:31"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Multichunches","timestamp":"2026-04-25 13:27:30"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 13:27:31"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:28:54"}
+{"id":"dAkO4771qhdInlPSAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:28:54"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:28:54"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:28:54"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:28:54"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 13:28:56","trigger":"startup"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 13:28:56","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:28:56"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:28:56"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 13:28:56"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:29:03"}
+{"id":"x595O9TY1I9zmg42AAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:29:03"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:29:03"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:29:03"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:29:03"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 13:29:05","trigger":"startup"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 13:29:05","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:29:05"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:29:05"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 13:29:05"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 13:31:22"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:31:22"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 13:31:22"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:31:22"}
+{"count":57,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 13:31:22"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 13:31:22","total":81}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 13:31:27"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:31:27"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 13:31:27"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:31:27"}
+{"count":57,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 13:31:27"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 13:31:27","total":81}
+{"id":"x595O9TY1I9zmg42AAAB","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 13:32:28"}
+{"id":"Hv_aPrD9JQlIBEJwAAAD","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:32:29"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 13:32:31"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:32:31"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 13:32:31"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:32:31"}
+{"count":57,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 13:32:31"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 13:32:31","total":81}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:33:13"}
+{"id":"gZn0vsuHROsrkCLqAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:33:13"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:33:13"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:33:13"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:33:13"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 13:33:14","trigger":"startup"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 13:33:14","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:33:15"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:33:15"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 13:33:15"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:33:23"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:33:23"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:33:23"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:33:23"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:33:23"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:33:23"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:33:23"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:33:28"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:33:28"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:33:28"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:33:28"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:33:28"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:33:28"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:33:28"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:34:07"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:34:07"}
+{"lastUid":1626,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:34:07"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:34:07"}
+{"lastUid":153,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:34:07"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:34:07"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:34:07"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Multichunches","timestamp":"2026-04-25 13:34:09","trigger":"startup"}
+{"count":6,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 13:34:09","trigger":"startup"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:34:09"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 13:34:09"}
+{"bodySnippet":"________________________________\nDe: BCRNotificación <BCRNotificacion@bancobcr.com>\nEnviados: sábado","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Etelgive","timestamp":"2026-04-25 13:34:09"}
+{"id":"zRjB4pJ-RqA89BjyAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:34:10"}
+{"id":"zRjB4pJ-RqA89BjyAAAB","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 13:34:54"}
+{"id":"VcDxx0J_lZffs16MAAAD","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:34:55"}
+{"level":"info","message":"Iniciando sincronización de CSV manual...","timestamp":"2026-04-25 13:35:00"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:35:00"}
+{"count":24,"level":"info","message":"CSV recreado y sincronizado","project":"Etelgive","timestamp":"2026-04-25 13:35:00"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:35:00"}
+{"count":57,"level":"info","message":"CSV recreado y sincronizado","project":"Multichunches","timestamp":"2026-04-25 13:35:00"}
+{"level":"info","message":"Sincronización completada","timestamp":"2026-04-25 13:35:00","total":81}
+{"id":"VcDxx0J_lZffs16MAAAD","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 13:37:10"}
+{"id":"bhQeMtTmRK-4uYTuAAAF","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:37:10"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:38:04"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:38:04"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:38:04"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:38:04"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:38:04"}
+{"id":"S-EEa5glZlLQCPvFAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:38:04"}
+{"lastUid":159,"level":"info","message":"Cursor inicializado al final de la bandeja","project":"Multichunches","timestamp":"2026-04-25 13:38:05"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 13:38:06"}
+{"lastUid":1632,"level":"info","message":"Cursor inicializado al final de la bandeja","project":"Etelgive","timestamp":"2026-04-25 13:38:06"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 13:38:06"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:38:10"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:38:10"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:38:10"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:38:10"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:38:10"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:38:10"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:478:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:490:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:508:1)","timestamp":"2026-04-25 13:38:10"}
+{"id":"S-EEa5glZlLQCPvFAAAB","level":"info","message":"Cliente desconectado de WebSocket","timestamp":"2026-04-25 13:38:21"}
+{"id":"1GimGuxbE_PXQHpdAAAD","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:38:21"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:38:51"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:38:51"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:38:51"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:38:51"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:38:51"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:38:51"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:38:51"}
+{"id":"Xt_qz7c3DXOvezXYAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:38:51"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 13:38:53"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 13:38:53"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 13:39:13"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:482:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:493:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:512:1)","timestamp":"2026-04-25 13:39:13"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:482:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:493:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:512:1)","timestamp":"2026-04-25 13:39:13"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":1632,"level":"info","message":"Cursor IMAP cargado","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 13:39:13"}
+{"lastUid":159,"level":"info","message":"Cursor IMAP cargado","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 13:39:13"}
+{"error":"listen EADDRINUSE: address already in use :::3001","level":"error","message":"EXCEPCIÓN NO CONTROLADA (Fatal)","stack":"Error: listen EADDRINUSE: address already in use :::3001\n    at Server.setupListenHandle [as _listen2] (node:net:1948:16)\n    at listenInCluster (node:net:2005:12)\n    at Server.listen (node:net:2110:7)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:482:16\n    at Generator.next (<anonymous>)\n    at C:\\validador-sinpesXcorreos\\src\\index.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\validador-sinpesXcorreos\\src\\index.ts:4:12)\n    at main (C:\\validador-sinpesXcorreos\\src\\index.ts:493:12)\n    at Object.<anonymous> (C:\\validador-sinpesXcorreos\\src\\index.ts:512:1)","timestamp":"2026-04-25 13:39:13"}
+{"id":"GIi0aTA4Q5qFwkFsAAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 13:39:13"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 13:39:15"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 13:39:15"}
+{"count":1,"level":"info","message":"Nuevos correos detectados","project":"Etelgive","timestamp":"2026-04-25 13:59:15","trigger":"idle"}
+{"error":"Socket timeout","level":"error","message":"Error de socket/IMAP detectado","project":"Etelgive","timestamp":"2026-04-25 14:04:15"}
+{"level":"warn","message":"Conexión IMAP cerrada. Reconexión en 30s...","project":"Etelgive","timestamp":"2026-04-25 14:04:15"}
+{"error":{"code":"NoConnection"},"level":"error","message":"Error crítico en SyncEngine","project":"Etelgive","timestamp":"2026-04-25 14:04:15"}
+{"count":24,"level":"info","message":"Referencias cargadas","project":"Etelgive","timestamp":"2026-04-25 14:04:41"}
+{"count":57,"level":"info","message":"Referencias cargadas","project":"Multichunches","timestamp":"2026-04-25 14:04:41"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Etelgive","timestamp":"2026-04-25 14:04:41"}
+{"level":"info","message":"Iniciando motor IMAP","project":"Multichunches","timestamp":"2026-04-25 14:04:41"}
+{"env":"development","level":"info","message":"Servidor listo y escuchando","port":3001,"timestamp":"2026-04-25 14:04:41"}
+{"id":"49UrV9RGSAUzr7N8AAAB","level":"info","message":"Cliente conectado via WebSocket","timestamp":"2026-04-25 14:04:41"}
+{"level":"info","message":"Estado inicial vacío. Escaneando últimas 24h...","project":"Multichunches","timestamp":"2026-04-25 14:04:42"}
+{"level":"info","message":"Iniciando re-escaneo manual","project":"Multichunches","since":"2026-04-24T20:04:42.963Z","timestamp":"2026-04-25 14:04:42"}
+{"count":16,"level":"info","message":"Correos encontrados en re-escaneo","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Estado inicial vacío. Escaneando últimas 24h...","project":"Etelgive","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Iniciando re-escaneo manual","project":"Etelgive","since":"2026-04-24T20:04:43.284Z","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa Pago 24/04/2026 Af# 0020046232 Credito a su cuenta XX","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042415183010933810885","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042415183010933810885","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa RETIRO EFECTIVO 89672123 Credito a su cuenta XX318-7 ","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042416183221226773390","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042416183221226773390","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa PAGO VENTOSA Credito a su cuenta XX318-7 por 1,800.00","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042415183010536329300","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042415183010536329300","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042482183010497146522","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042482183010497146522","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa TRANSFERENCIA SINPE Credito a su cuenta XX318-7 por 1","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042415183010937550501","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042415183010937550501","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa COPIAS 89672123 Credito a su cuenta XX318-7 por 800.0","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa Pago 25/04/2026 Af# 0020046232 Credito a su cuenta XX","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515183010543274023","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515183010543274023","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381450816","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515283009381805981","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515283009381805981","timestamp":"2026-04-25 14:04:43"}
+{"bodySnippet":"Notificación BN\n-------------------\nBN informa TRANSFERENCIA SINPE Credito a su cuenta XX318-7 por 1","level":"warn","message":"Email parece relevante pero no se pudo parsear","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Multichunches","referencia":"2026042515183010545653569","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Multichunches","referencia":"2026042515183010545653569","timestamp":"2026-04-25 14:04:43"}
+{"count":5,"level":"info","message":"Correos encontrados en re-escaneo","project":"Etelgive","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Multichunches","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"2026042415183010935420191","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Etelgive","referencia":"2026042415183010935420191","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"2026042415183010535447635","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Etelgive","referencia":"2026042415183010535447635","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción agregada al CSV","project":"Etelgive","referencia":"2026042515183010945493560","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Transacción integrada","project":"Etelgive","referencia":"2026042515183010945493560","timestamp":"2026-04-25 14:04:43"}
+{"level":"info","message":"Pipeline IMAP listo","project":"Etelgive","timestamp":"2026-04-25 14:04:44"}
