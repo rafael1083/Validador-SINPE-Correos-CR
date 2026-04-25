@@ -90,6 +90,7 @@
             </div>
         </div>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
     <script>
         let currentProject = 'Etelgive';
 
@@ -199,16 +200,32 @@
             }
         }
 
-        // Socket.IO real-time listener
+        // Socket.IO real-time listener (AFTER socket.io.js is loaded)
         const socket = io();
+        socket.on('connect', () => {
+            console.log('✓ Socket.IO conectado');
+            document.title = '✓ Validador SINPES (Conectado)';
+        });
+        socket.on('disconnect', () => {
+            console.log('✗ Socket.IO desconectado');
+            document.title = 'Validador SINPES (Desconectado)';
+        });
         socket.on('new-transaction', (transaction) => {
-            if (transaction.project === currentProject) {
+            console.log('📨 Nueva transacción:', transaction.proyecto);
+            if (transaction.proyecto === currentProject) {
                 loadTransactions();
             }
         });
 
+        // Polling fallback: refresca cada 10 segundos si Socket.IO falla
+        setInterval(() => {
+            if (!socket.connected) {
+                console.log('⏱️ Polling fallback: Socket.IO desconectado, refrescando...');
+                loadTransactions();
+            }
+        }, 10000);
+
         loadTransactions();
     </script>
-    <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

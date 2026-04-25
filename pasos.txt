@@ -1,0 +1,133 @@
+================================================================================
+VALIDADOR SINPE - GUIA DE DESPLIEGUE
+================================================================================
+
+FLUJO COMPLETO: DESARROLLO → MAIN (GitHub) → PRODUCCION
+
+================================================================================
+PARTE 1: DESARROLLO (Windows 11)
+================================================================================
+
+PASO 1: Hacer cambios en el código
+  - Editar archivos en src/
+  - Probar localmente con: npm run dev
+  - Verificar tests: npm test
+
+PASO 2: Publicar cambios a GitHub
+  - Ejecutar: 1.publicar.bat
+
+  Este script hace:
+    ✓ Pushea cambios a rama 'dev' en GitHub
+    ✓ Sincroniza rama 'main' desde 'dev' (merge)
+    ✓ Regresa a rama 'dev' localmente
+
+  Resultado: GitHub main tiene los cambios listos
+
+VERIFICAR (opcional):
+  - Ir a: https://github.com/rafael1083/Validador-SINPE-Correos-CR
+  - Ver que main tiene los nuevos commits
+
+================================================================================
+PARTE 2: PRODUCCION (Windows 10)
+================================================================================
+
+PASO 1: Descargar cambios desde GitHub
+  - Ejecutar: 2.actualizar_servidor.bat
+
+  Este script hace:
+    ✓ Limpia estado local (git reset --hard)
+    ✓ Checkea rama 'main'
+    ✓ Descarga cambios desde GitHub
+    ✓ Instala dependencias Node.js
+    ✓ Reinicia servidor automáticamente
+
+  Resultado: Servidor en producción actualizado con cambios de main
+
+VERIFICAR:
+  - Ver que el proceso node está corriendo
+  - Hacer curl a http://localhost:3001/api/transactions
+  - Confirmar datos cargados
+
+================================================================================
+RESUMEN DE ARCHIVOS .BAT
+================================================================================
+
+DESARROLLO (Windows 11):
+  1.publicar.bat
+    └─ Dev → Main (GitHub)
+    └─ Ejecutar cuando hayas hecho cambios
+    └─ Antes de: Actualizar servidor
+
+PRODUCCION (Windows 10):
+  2.actualizar_servidor.bat
+    └─ Main (GitHub) → Local
+    └─ Instala + reinicia servidor
+    └─ Ejecutar después de publicar en dev
+
+  2.vigilante_produccion.bat
+    └─ Monitor del servidor
+    └─ Opcional: vigilancia automática
+
+OTROS:
+  iniciarBackground.bat
+    └─ Inicia servidor en background
+    └─ Usado por 2.actualizar_servidor.bat
+
+================================================================================
+FLUJO RECOMENDADO PASO A PASO
+================================================================================
+
+EN DESARROLLO (Windows 11):
+  1. Editar código
+  2. npm run dev (probar)
+  3. npm test (validar)
+  4. Doble-click: 1.publicar.bat
+  5. Esperar confirmación ✅
+
+EN PRODUCCION (Windows 10):
+  1. Esperar a que dev termine (5-10 segundos)
+  2. Doble-click: 2.actualizar_servidor.bat
+  3. Esperar a que reinicie (30-60 segundos)
+  4. Verificar: http://localhost:3001/api/transactions
+  5. Confirmar datos ✅
+
+================================================================================
+TIEMPO ESTIMADO
+================================================================================
+
+Desarrollo:   2-5 minutos (cambios + test + publicar)
+Transición:   10-15 segundos (GitHub sincroniza)
+Producción:   30-60 segundos (descarga + instalación + reinicio)
+TOTAL:        3-7 minutos de inicio a fin
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problema: 1.publicar.bat falla
+  → Verificar: git status (sin cambios sin commitear)
+  → Solución: git add . && git commit antes de ejecutar
+
+Problema: 2.actualizar_servidor.bat falla
+  → Verificar: Conexión a GitHub
+  → Verificar: Rama 'main' tiene cambios en GitHub
+  → Solución: Ejecutar 1.publicar.bat de nuevo
+
+Problema: Servidor no inicia en producción
+  → Ver logs en: C:\validador-sinpesXcorreos\data\
+  → Reinstalar: npm install
+  → Verificar: imap.txt con credenciales válidas
+
+================================================================================
+NOTAS IMPORTANTES
+================================================================================
+
+✓ 1.publicar.bat usa merge (seguro, preserva historial)
+✓ 2.actualizar_servidor.bat usa --hard (limpia producción)
+✓ Siempre publicar desde dev antes de actualizar servidor
+✓ .gitignore protege: imap.txt, data/*.csv, .env
+✓ Servidor escucha en puerto 3001
+
+================================================================================
+ULTIMA ACTUALIZACION: 2026-04-25
+================================================================================

@@ -311,6 +311,13 @@ class SinpeWatcher {
             console.log(`[IMAP][${this.account.project}] Conexión cerrada. Reconectando en 30s...`);
             setTimeout(() => this.start(), 30000);
         });
+
+        try {
+            await this.client.idle();
+        } catch (err) {
+            console.error(`[ERROR][${this.account.project}] Error en IDLE:`, err);
+            setTimeout(() => this.start(), 30000);
+        }
     }
 
     private async scanRecent() {
@@ -367,7 +374,9 @@ class SinpeWatcher {
             const saved = await saveTransaction(transaction, project);
             if (saved) {
                 console.log(`[SUCCESS][${project}] Transacción guardada: ${transaction.referencia}`);
-                io.emit('new-transaction', { ...transaction, project });
+                const eventData = { ...transaction, proyecto: project };
+                io.emit('new-transaction', eventData);
+                console.log(`[SOCKET.IO][${project}] Evento emitido: ${transaction.referencia}`);
             }
         }
     }

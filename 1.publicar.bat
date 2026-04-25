@@ -14,16 +14,46 @@ if not exist .git (
 
 :: 2. Sincronizar DEV
 echo [2/5] Guardando cambios en rama 'dev'...
-git checkout -b dev 2>nul || git checkout dev
-git add .
-git commit -m "Actualizacion: %date% %time%"
-git push -u origin dev --force
+git checkout dev 2>nul || (git checkout -b dev && git push -u origin dev)
 
-:: 3. Sincronizar MAIN (Produccion)
-echo [3/5] Preparando rama 'main' para Produccion...
-git checkout -b main 2>nul || git checkout main
-git reset --hard dev
-git push -u origin main --force
+:: Verificar si hay cambios
+git status --porcelain >nul
+if %errorlevel% equ 0 (
+    git add .
+    git commit -m "Actualizacion: %date% %time%" 2>nul
+    if %errorlevel% equ 0 (
+        git push origin dev
+        if %errorlevel% neq 0 (
+            echo ✗ Error al pushear a dev
+            pause & exit /b 1
+        )
+    )
+) else (
+    echo ✓ Sin cambios nuevos en dev
+)
+
+:: 3. Sincronizar MAIN (Produccion) con merge
+echo [3/5] Sincronizando main desde dev (merge seguro)...
+git checkout main 2>nul || git checkout -b main
+
+:: Pull main para asegurar estado actualizado
+git pull origin main 2>nul
+
+:: Merge desde dev sin --force (preserva historial)
+git merge dev -m "Release: sincronizacion dev a main (%date% %time%)"
+if %errorlevel% neq 0 (
+    echo ✗ Error en merge. Resolviendo...
+    git merge --abort
+    echo ⚠ Revisar manualmente conflictos
+    pause & exit /b 1
+)
+
+:: Push a main (sin --force para seguridad)
+git push origin main
+if %errorlevel% neq 0 (
+    echo ✗ Error al pushear main. Revisar permisos/conflictos.
+    pause & exit /b 1
+)
 
 :: 4. Regresar a DEV para seguir trabajando
 echo [4/5] Regresando a entorno de desarrollo...
@@ -31,6 +61,9 @@ git checkout dev
 
 echo ====================================================
 echo ✅ TODO LISTO EN GITHUB (DEV Y MAIN)
+echo ✓ DEV actualizado y pusheado
+echo ✓ MAIN sincronizado via merge (historial preservado)
+echo.
 echo Ahora ve a tu PC Windows 10 y corre 'actualizar_servidor.bat'
 echo ====================================================
 pause
