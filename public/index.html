@@ -35,12 +35,88 @@
         button { padding: 10px 20px; background: #0099ff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
         button:hover { background: #0077cc; }
         .project-info { background: #1a3a52; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-size: 13px; color: #a0c4ff; }
+        .status-indicator { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: #2a2a2a; border-radius: 6px; margin-bottom: 15px; font-size: 12px; font-weight: 600; }
+        .status-dot { width: 12px; height: 12px; border-radius: 50%; animation: pulse 2s infinite; }
+        .status-dot.connected { background: #00ff88; box-shadow: 0 0 8px #00ff88; }
+        .status-dot.disconnected { background: #ff4444; box-shadow: 0 0 8px #ff4444; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+        /* RESPONSIVO */
+        @media (max-width: 1024px) {
+            .sidebar { width: 240px; padding: 15px; }
+            .project-btn { min-height: 50px; padding: 8px; font-size: 13px; }
+            .project-btn img { height: 40px; width: 40px; }
+            .content { padding: 15px; }
+            h1 { font-size: 24px; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; }
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; height: auto; }
+            .main-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #333; padding: 8px; max-height: auto; overflow-x: visible; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+            .sidebar h2 { grid-column: 1 / 2; grid-row: 1; margin-bottom: 0; white-space: nowrap; font-size: 11px; }
+            .sidebar > .status-indicator { grid-column: 2; grid-row: 1; margin-left: 0; margin-bottom: 0; justify-self: end; }
+            .sidebar > .project-btn:nth-child(3) { grid-column: 1; grid-row: 2; width: calc(50% - 3px); }
+            .sidebar > .project-btn:nth-child(4) { grid-column: 2; grid-row: 2; width: calc(50% - 3px); }
+            .sidebar > .project-info { grid-column: 1 / -1; grid-row: 3; }
+            .sidebar > button[onclick*="sync"] { grid-column: 1 / -1; grid-row: 4; }
+            .sidebar > .project-btn { width: calc(50% - 3px) !important; flex: 0 0 calc(50% - 3px) !important; padding: 6px 4px !important; font-size: 10px !important; margin-bottom: 0 !important; min-height: 45px !important; }
+            .project-btn > div { display: block; font-size: 9px; }
+            .project-name { font-weight: 600; }
+            .project-btn img { height: 32px; width: 32px; }
+            .sidebar > .project-info { width: 100%; }
+            .sidebar > button[onclick*="sync"] { width: 100%; }
+            .content { padding: 10px; overflow-y: auto; }
+            h1 { font-size: 20px; margin-bottom: 8px; }
+            .header { margin-bottom: 10px; }
+            .tabs { gap: 5px; margin-bottom: 15px; }
+            .tab-button { padding: 8px 12px; font-size: 12px; }
+            .tab-content { overflow-x: auto; }
+            table { font-size: 11px; }
+            th, td { padding: 6px; }
+            button { padding: 8px 12px; font-size: 12px; }
+            .status-indicator { font-size: 11px; padding: 8px; margin-bottom: 0; }
+            .project-info { font-size: 11px; padding: 8px; }
+            div[style*="display: flex; gap: 10px"] { flex-wrap: wrap; }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar { gap: 6px; padding: 6px 8px; }
+            .sidebar h2 { font-size: 11px; }
+            .project-btn { min-height: 36px; padding: 3px 6px; font-size: 10px; }
+            .project-btn img { height: 28px; width: 28px; }
+            .status-indicator { font-size: 10px; padding: 4px 6px; }
+            .status-dot { width: 10px; height: 10px; }
+            h1 { font-size: 18px; }
+            .tabs { gap: 2px; }
+            .tab-button { padding: 6px 10px; font-size: 11px; }
+            table { font-size: 10px; }
+            th, td { padding: 4px; }
+            button { padding: 6px 10px; font-size: 11px; }
+            .content { padding: 8px; }
+            code { font-size: 9px; }
+        }
+
+        @media (max-width: 768px) {
+            table { display: block; overflow-x: auto; white-space: nowrap; }
+            thead { display: none; }
+            tbody { display: flex; flex-direction: column; }
+            tr { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 10px; background: #242424; margin-bottom: 10px; border: 1px solid #333; }
+            td { display: contents; }
+            td:before { content: attr(data-label); font-weight: 600; color: #0099ff; }
+        }
     </style>
 </head>
 <body>
     <div class="main-wrapper">
         <div class="sidebar">
             <h2>📋 Proyectos</h2>
+            <div class="status-indicator">
+                <div class="status-dot connected" id="statusDot"></div>
+                <span id="statusText">Conectado</span>
+            </div>
             <button class="project-btn active" onclick="selectProject('Etelgive')">
                 <img src="/logos/bcr.png" alt="BCR">
                 <div><div class="project-name">Etelgive</div><div style="font-size: 11px; color: #888;">BCR</div></div>
@@ -136,15 +212,15 @@
                 } else {
                     tbody.innerHTML = transactions.map(t => `
                         <tr>
-                            <td>${formatDateTime(t.fecha)}</td>
-                            <td>${t.proyecto}</td>
-                            <td><code>${t.referencia}</code></td>
-                            <td>${t.telefonoOrigen}</td>
-                            <td>${t.nombreOrigen}</td>
-                            <td>${t.entidadOrigen}</td>
-                            <td style="text-align: right; font-weight: bold;">${formatCurrency(t.monto)}</td>
-                            <td>${t.motivo}</td>
-                            <td><small>${t.estado}</small></td>
+                            <td data-label="Fecha/Hora">${formatDateTime(t.fecha)}</td>
+                            <td data-label="Proyecto">${t.proyecto}</td>
+                            <td data-label="Referencia"><code>${t.referencia}</code></td>
+                            <td data-label="Teléfono">${t.telefonoOrigen}</td>
+                            <td data-label="Cliente">${t.nombreOrigen}</td>
+                            <td data-label="Entidad">${t.entidadOrigen}</td>
+                            <td data-label="Monto" style="text-align: right; font-weight: bold;">${formatCurrency(t.monto)}</td>
+                            <td data-label="Motivo">${t.motivo}</td>
+                            <td data-label="Estado"><small>${t.estado}</small></td>
                         </tr>
                     `).join('');
                 }
@@ -205,10 +281,14 @@
         socket.on('connect', () => {
             console.log('✓ Socket.IO conectado');
             document.title = '✓ Validador SINPES (Conectado)';
+            document.getElementById('statusDot').className = 'status-dot connected';
+            document.getElementById('statusText').textContent = 'Conectado';
         });
         socket.on('disconnect', () => {
             console.log('✗ Socket.IO desconectado');
             document.title = 'Validador SINPES (Desconectado)';
+            document.getElementById('statusDot').className = 'status-dot disconnected';
+            document.getElementById('statusText').textContent = 'Desconectado';
         });
         socket.on('new-transaction', (transaction) => {
             console.log('📨 Nueva transacción:', transaction.proyecto);
