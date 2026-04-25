@@ -1,0 +1,511 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "📋 Proyectos" [level=2] [ref=e4]
+    - generic [ref=e7]: Conectado
+    - button "BCR Etelgive BCR" [ref=e8] [cursor=pointer]:
+      - img "BCR" [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]: Etelgive
+        - generic [ref=e12]: BCR
+    - button "Banco Nacional Multichunches Banco Nacional" [ref=e13] [cursor=pointer]:
+      - img "Banco Nacional" [ref=e14]
+      - generic [ref=e15]:
+        - generic [ref=e16]: Multichunches
+        - generic [ref=e17]: Banco Nacional
+    - generic [ref=e18]:
+      - strong [ref=e19]: BCR
+      - text: "y"
+      - strong [ref=e20]: Banco Nacional
+      - text: transacciones SINPE Móvil
+    - button "🔄 Sincronizar y Descargar" [ref=e21] [cursor=pointer]
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - heading "📧 Validador SINPES" [level=1] [ref=e24]
+      - generic [ref=e25]:
+        - button "Transacciones" [ref=e26] [cursor=pointer]
+        - button "Configuración" [ref=e27] [cursor=pointer]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - button "🔍 Buscar Todos" [ref=e30] [cursor=pointer]
+        - button "📅 Esta Semana" [ref=e31] [cursor=pointer]
+        - button "📆 Este Mes" [ref=e32] [cursor=pointer]
+        - button "⬇️ Descargar Mes" [ref=e33] [cursor=pointer]
+      - generic [ref=e34]: "📊 SINPES Recibidos: 34"
+      - table [ref=e35]:
+        - rowgroup [ref=e47]:
+          - row "Fecha/Hora 25/04/2026 16:51 Proyecto Etelgive Referencia 2026042516183221229432782 Teléfono 88518950 Cliente Luis Alfredo Villegas Rodriguez Entidad Banco Popular y de Desarrollo Comunal Monto ¢10 000,00 Motivo Zapatos Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e422]:
+            - cell "Fecha/Hora 25/04/2026 16:51" [ref=e423]
+            - cell "Proyecto Etelgive" [ref=e424]
+            - cell "Referencia 2026042516183221229432782" [ref=e425]:
+              - text: Referencia
+              - code [ref=e52]: "2026042516183221229432782"
+            - cell "Teléfono 88518950" [ref=e426]
+            - cell "Cliente Luis Alfredo Villegas Rodriguez" [ref=e427]
+            - cell "Entidad Banco Popular y de Desarrollo Comunal" [ref=e428]
+            - cell "Monto ¢10 000,00" [ref=e429]
+            - cell "Motivo Zapatos" [ref=e430]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e431]:
+              - text: Estado
+              - generic [ref=e432]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 15:34 Proyecto Etelgive Referencia 2026042515183010948552636 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢4,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e433]:
+            - cell "Fecha/Hora 25/04/2026 15:34" [ref=e434]
+            - cell "Proyecto Etelgive" [ref=e435]
+            - cell "Referencia 2026042515183010948552636" [ref=e436]:
+              - text: Referencia
+              - code [ref=e63]: "2026042515183010948552636"
+            - cell "Teléfono 0" [ref=e437]
+            - cell "Cliente Rafael Alberto Alva" [ref=e438]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e439]
+            - cell "Monto ¢4,00" [ref=e440]
+            - cell "Motivo PAGO-89447204" [ref=e441]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e442]:
+              - text: Estado
+              - generic [ref=e443]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 15:31 Proyecto Etelgive Referencia 2026042515183010948517054 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢7,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e444]:
+            - cell "Fecha/Hora 25/04/2026 15:31" [ref=e445]
+            - cell "Proyecto Etelgive" [ref=e446]
+            - cell "Referencia 2026042515183010948517054" [ref=e447]:
+              - text: Referencia
+              - code [ref=e74]: "2026042515183010948517054"
+            - cell "Teléfono 0" [ref=e448]
+            - cell "Cliente Rafael Alberto Alva" [ref=e449]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e450]
+            - cell "Monto ¢7,00" [ref=e451]
+            - cell "Motivo PAGO-89447204" [ref=e452]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e453]:
+              - text: Estado
+              - generic [ref=e454]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 15:27 Proyecto Etelgive Referencia 2026042515183010948447566 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢8,00 Motivo PSGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e455]:
+            - cell "Fecha/Hora 25/04/2026 15:27" [ref=e456]
+            - cell "Proyecto Etelgive" [ref=e457]
+            - cell "Referencia 2026042515183010948447566" [ref=e458]:
+              - text: Referencia
+              - code [ref=e85]: "2026042515183010948447566"
+            - cell "Teléfono 0" [ref=e459]
+            - cell "Cliente Rafael Alberto Alva" [ref=e460]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e461]
+            - cell "Monto ¢8,00" [ref=e462]
+            - cell "Motivo PSGO-89447204" [ref=e463]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e464]:
+              - text: Estado
+              - generic [ref=e465]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 15:12 Proyecto Etelgive Referencia 2026042515183010948255068 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢15,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e466]:
+            - cell "Fecha/Hora 25/04/2026 15:12" [ref=e467]
+            - cell "Proyecto Etelgive" [ref=e468]
+            - cell "Referencia 2026042515183010948255068" [ref=e469]:
+              - text: Referencia
+              - code [ref=e96]: "2026042515183010948255068"
+            - cell "Teléfono 0" [ref=e470]
+            - cell "Cliente Rafael Alberto Alva" [ref=e471]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e472]
+            - cell "Monto ¢15,00" [ref=e473]
+            - cell "Motivo PAGO-89447204" [ref=e474]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e475]:
+              - text: Estado
+              - generic [ref=e476]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 15:04 Proyecto Etelgive Referencia ETG1777151060887 Teléfono 8765-4321 Cliente Test BCR Usuario Entidad Banco Nacional de Costa Rica Monto ¢5 678,90 Motivo Prueba Etelgive QA Estado SINPEMOVIL - Notificación de transacción realizada - TEST" [ref=e477]:
+            - cell "Fecha/Hora 25/04/2026 15:04" [ref=e478]
+            - cell "Proyecto Etelgive" [ref=e479]
+            - cell "Referencia ETG1777151060887" [ref=e480]:
+              - text: Referencia
+              - code [ref=e107]: ETG1777151060887
+            - cell "Teléfono 8765-4321" [ref=e481]
+            - cell "Cliente Test BCR Usuario" [ref=e482]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e483]
+            - cell "Monto ¢5 678,90" [ref=e484]
+            - cell "Motivo Prueba Etelgive QA" [ref=e485]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada - TEST" [ref=e486]:
+              - text: Estado
+              - generic [ref=e487]: SINPEMOVIL - Notificación de transacción realizada - TEST
+          - row "Fecha/Hora 25/04/2026 15:02 Proyecto Etelgive Referencia 2026042515183010948128335 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢3,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e488]:
+            - cell "Fecha/Hora 25/04/2026 15:02" [ref=e489]
+            - cell "Proyecto Etelgive" [ref=e490]
+            - cell "Referencia 2026042515183010948128335" [ref=e491]:
+              - text: Referencia
+              - code [ref=e118]: "2026042515183010948128335"
+            - cell "Teléfono 0" [ref=e492]
+            - cell "Cliente Rafael Alberto Alva" [ref=e493]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e494]
+            - cell "Monto ¢3,00" [ref=e495]
+            - cell "Motivo PAGO-89447204" [ref=e496]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e497]:
+              - text: Estado
+              - generic [ref=e498]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 14:59 Proyecto Etelgive Referencia 2026042515183010948069153 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢10,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e499]:
+            - cell "Fecha/Hora 25/04/2026 14:59" [ref=e500]
+            - cell "Proyecto Etelgive" [ref=e501]
+            - cell "Referencia 2026042515183010948069153" [ref=e502]:
+              - text: Referencia
+              - code [ref=e129]: "2026042515183010948069153"
+            - cell "Teléfono 0" [ref=e503]
+            - cell "Cliente Rafael Alberto Alva" [ref=e504]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e505]
+            - cell "Monto ¢10,00" [ref=e506]
+            - cell "Motivo PAGO-89447204" [ref=e507]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e508]:
+              - text: Estado
+              - generic [ref=e509]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 14:52 Proyecto Etelgive Referencia 2026042515183010547998249 Teléfono 85883304 Cliente Marilyz Alvarado Torres Entidad Banco Nacional de Costa Rica Monto ¢600,00 Motivo UNAS-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e510]:
+            - cell "Fecha/Hora 25/04/2026 14:52" [ref=e511]
+            - cell "Proyecto Etelgive" [ref=e512]
+            - cell "Referencia 2026042515183010547998249" [ref=e513]:
+              - text: Referencia
+              - code [ref=e140]: "2026042515183010547998249"
+            - cell "Teléfono 85883304" [ref=e514]
+            - cell "Cliente Marilyz Alvarado Torres" [ref=e515]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e516]
+            - cell "Monto ¢600,00" [ref=e517]
+            - cell "Motivo UNAS-89447204" [ref=e518]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e519]:
+              - text: Estado
+              - generic [ref=e520]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 25/04/2026 12:01 Proyecto Etelgive Referencia 2026042515183010945493560 Teléfono 0 Cliente Samantha Cristina N Entidad Banco Nacional de Costa Rica Monto ¢400,00 Motivo P-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e521]:
+            - cell "Fecha/Hora 25/04/2026 12:01" [ref=e522]
+            - cell "Proyecto Etelgive" [ref=e523]
+            - cell "Referencia 2026042515183010945493560" [ref=e524]:
+              - text: Referencia
+              - code [ref=e151]: "2026042515183010945493560"
+            - cell "Teléfono 0" [ref=e525]
+            - cell "Cliente Samantha Cristina N" [ref=e526]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e527]
+            - cell "Monto ¢400,00" [ref=e528]
+            - cell "Motivo P-89447204" [ref=e529]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e530]:
+              - text: Estado
+              - generic [ref=e531]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 24/04/2026 14:55 Proyecto Etelgive Referencia 2026042415183010535447635 Teléfono 86698424 Cliente Hillary Maria Ortega Araya Entidad Banco Nacional de Costa Rica Monto ¢1 000,00 Motivo HILLARY-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e532]:
+            - cell "Fecha/Hora 24/04/2026 14:55" [ref=e533]
+            - cell "Proyecto Etelgive" [ref=e534]
+            - cell "Referencia 2026042415183010535447635" [ref=e535]:
+              - text: Referencia
+              - code [ref=e162]: "2026042415183010535447635"
+            - cell "Teléfono 86698424" [ref=e536]
+            - cell "Cliente Hillary Maria Ortega Araya" [ref=e537]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e538]
+            - cell "Monto ¢1 000,00" [ref=e539]
+            - cell "Motivo HILLARY-89447204" [ref=e540]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e541]:
+              - text: Estado
+              - generic [ref=e542]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 24/04/2026 14:53 Proyecto Etelgive Referencia 2026042415183010935420191 Teléfono 0 Cliente Alvarado Alba Luz Entidad Banco Nacional de Costa Rica Monto ¢1 000,00 Motivo efectivo -89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e543]:
+            - cell "Fecha/Hora 24/04/2026 14:53" [ref=e544]
+            - cell "Proyecto Etelgive" [ref=e545]
+            - cell "Referencia 2026042415183010935420191" [ref=e546]:
+              - text: Referencia
+              - code [ref=e173]: "2026042415183010935420191"
+            - cell "Teléfono 0" [ref=e547]
+            - cell "Cliente Alvarado Alba Luz" [ref=e548]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e549]
+            - cell "Monto ¢1 000,00" [ref=e550]
+            - cell "Motivo efectivo -89447204" [ref=e551]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e552]:
+              - text: Estado
+              - generic [ref=e553]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 23/04/2026 18:53 Proyecto Etelgive Referencia 2026042315284001989544496 Teléfono 00000000 Cliente Sanchez Alvarez Obdulia Maria Entidad Banco de Costa Rica Monto ¢27 000,00 Motivo pago de maletines Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e554]:
+            - cell "Fecha/Hora 23/04/2026 18:53" [ref=e555]
+            - cell "Proyecto Etelgive" [ref=e556]
+            - cell "Referencia 2026042315284001989544496" [ref=e557]:
+              - text: Referencia
+              - code [ref=e184]: "2026042315284001989544496"
+            - cell "Teléfono 00000000" [ref=e558]
+            - cell "Cliente Sanchez Alvarez Obdulia Maria" [ref=e559]
+            - cell "Entidad Banco de Costa Rica" [ref=e560]
+            - cell "Monto ¢27 000,00" [ref=e561]
+            - cell "Motivo pago de maletines" [ref=e562]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e563]:
+              - text: Estado
+              - generic [ref=e564]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 23/04/2026 15:22 Proyecto Etelgive Referencia 2026042310283001231133416 Teléfono 0 Cliente Luis Roberto Rodrigu Entidad Banco BAC San José Monto ¢400,00 Motivo Hilo___________ Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e565]:
+            - cell "Fecha/Hora 23/04/2026 15:22" [ref=e566]
+            - cell "Proyecto Etelgive" [ref=e567]
+            - cell "Referencia 2026042310283001231133416" [ref=e568]:
+              - text: Referencia
+              - code [ref=e195]: "2026042310283001231133416"
+            - cell "Teléfono 0" [ref=e569]
+            - cell "Cliente Luis Roberto Rodrigu" [ref=e570]
+            - cell "Entidad Banco BAC San José" [ref=e571]
+            - cell "Monto ¢400,00" [ref=e572]
+            - cell "Motivo Hilo___________" [ref=e573]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e574]:
+              - text: Estado
+              - generic [ref=e575]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 22/04/2026 18:45 Proyecto Etelgive Referencia 2026042215284001988165764 Teléfono 00000000 Cliente Carmona Ramirez Adriana Maria Entidad Banco de Costa Rica Monto ¢6 000,00 Motivo lavatorio1***** Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e576]:
+            - cell "Fecha/Hora 22/04/2026 18:45" [ref=e577]
+            - cell "Proyecto Etelgive" [ref=e578]
+            - cell "Referencia 2026042215284001988165764" [ref=e579]:
+              - text: Referencia
+              - code [ref=e206]: "2026042215284001988165764"
+            - cell "Teléfono 00000000" [ref=e580]
+            - cell "Cliente Carmona Ramirez Adriana Maria" [ref=e581]
+            - cell "Entidad Banco de Costa Rica" [ref=e582]
+            - cell "Monto ¢6 000,00" [ref=e583]
+            - cell "Motivo lavatorio1*****" [ref=e584]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e585]:
+              - text: Estado
+              - generic [ref=e586]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 22/04/2026 17:22 Proyecto Etelgive Referencia 2026042282183010496493119 Teléfono 83175813 Cliente Alvarado Torres Maureen Entidad Caja de ANDE Monto ¢7 000,00 Motivo multi Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e587]:
+            - cell "Fecha/Hora 22/04/2026 17:22" [ref=e588]
+            - cell "Proyecto Etelgive" [ref=e589]
+            - cell "Referencia 2026042282183010496493119" [ref=e590]:
+              - text: Referencia
+              - code [ref=e217]: "2026042282183010496493119"
+            - cell "Teléfono 83175813" [ref=e591]
+            - cell "Cliente Alvarado Torres Maureen" [ref=e592]
+            - cell "Entidad Caja de ANDE" [ref=e593]
+            - cell "Monto ¢7 000,00" [ref=e594]
+            - cell "Motivo multi" [ref=e595]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e596]:
+              - text: Estado
+              - generic [ref=e597]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 22/04/2026 14:37 Proyecto Etelgive Referencia 2026042281383010085286387 Teléfono 63679201 Cliente Nicaragua Martinez Keyla Patricia Entidad CoopeAlianza Monto ¢1 000,00 Motivo Esta transacción fue realizada el 22/04/2026 a las 2:37 PM Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e598]:
+            - cell "Fecha/Hora 22/04/2026 14:37" [ref=e599]
+            - cell "Proyecto Etelgive" [ref=e600]
+            - cell "Referencia 2026042281383010085286387" [ref=e601]:
+              - text: Referencia
+              - code [ref=e228]: "2026042281383010085286387"
+            - cell "Teléfono 63679201" [ref=e602]
+            - cell "Cliente Nicaragua Martinez Keyla Patricia" [ref=e603]
+            - cell "Entidad CoopeAlianza" [ref=e604]
+            - cell "Monto ¢1 000,00" [ref=e605]
+            - cell "Motivo Esta transacción fue realizada el 22/04/2026 a las 2:37 PM" [ref=e606]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e607]:
+              - text: Estado
+              - generic [ref=e608]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 21/04/2026 17:25 Proyecto Etelgive Referencia 2026042115183010905061126 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢5,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e609]:
+            - cell "Fecha/Hora 21/04/2026 17:25" [ref=e610]
+            - cell "Proyecto Etelgive" [ref=e611]
+            - cell "Referencia 2026042115183010905061126" [ref=e612]:
+              - text: Referencia
+              - code [ref=e239]: "2026042115183010905061126"
+            - cell "Teléfono 0" [ref=e613]
+            - cell "Cliente Rafael Alberto Alva" [ref=e614]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e615]
+            - cell "Monto ¢5,00" [ref=e616]
+            - cell "Motivo PAGO-89447204" [ref=e617]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e618]:
+              - text: Estado
+              - generic [ref=e619]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 21/04/2026 17:18 Proyecto Etelgive Referencia 2026042115183010904968870 Teléfono 0 Cliente Jose Gerardo Soto A Entidad Banco Nacional de Costa Rica Monto ¢22 000,00 Motivo empaques-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e620]:
+            - cell "Fecha/Hora 21/04/2026 17:18" [ref=e621]
+            - cell "Proyecto Etelgive" [ref=e622]
+            - cell "Referencia 2026042115183010904968870" [ref=e623]:
+              - text: Referencia
+              - code [ref=e250]: "2026042115183010904968870"
+            - cell "Teléfono 0" [ref=e624]
+            - cell "Cliente Jose Gerardo Soto A" [ref=e625]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e626]
+            - cell "Monto ¢22 000,00" [ref=e627]
+            - cell "Motivo empaques-89447204" [ref=e628]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e629]:
+              - text: Estado
+              - generic [ref=e630]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 21/04/2026 15:36 Proyecto Etelgive Referencia 2026042115183010503744585 Teléfono 83474123 Cliente Ana Yanci Amuy Gonzalez Entidad Banco Nacional de Costa Rica Monto ¢500,00 Motivo Pase-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e631]:
+            - cell "Fecha/Hora 21/04/2026 15:36" [ref=e632]
+            - cell "Proyecto Etelgive" [ref=e633]
+            - cell "Referencia 2026042115183010503744585" [ref=e634]:
+              - text: Referencia
+              - code [ref=e261]: "2026042115183010503744585"
+            - cell "Teléfono 83474123" [ref=e635]
+            - cell "Cliente Ana Yanci Amuy Gonzalez" [ref=e636]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e637]
+            - cell "Monto ¢500,00" [ref=e638]
+            - cell "Motivo Pase-89447204" [ref=e639]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e640]:
+              - text: Estado
+              - generic [ref=e641]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 21/04/2026 09:11 Proyecto Etelgive Referencia 2026042115183010599050315 Teléfono 62241038 Cliente Evelyn Cristina Rodriguez Castro Entidad Banco Nacional de Costa Rica Monto ¢950,00 Motivo Pase-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e642]:
+            - cell "Fecha/Hora 21/04/2026 09:11" [ref=e643]
+            - cell "Proyecto Etelgive" [ref=e644]
+            - cell "Referencia 2026042115183010599050315" [ref=e645]:
+              - text: Referencia
+              - code [ref=e272]: "2026042115183010599050315"
+            - cell "Teléfono 62241038" [ref=e646]
+            - cell "Cliente Evelyn Cristina Rodriguez Castro" [ref=e647]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e648]
+            - cell "Monto ¢950,00" [ref=e649]
+            - cell "Motivo Pase-89447204" [ref=e650]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e651]:
+              - text: Estado
+              - generic [ref=e652]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 20/04/2026 15:00 Proyecto Etelgive Referencia 2026042015183010992282878 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢5,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e653]:
+            - cell "Fecha/Hora 20/04/2026 15:00" [ref=e654]
+            - cell "Proyecto Etelgive" [ref=e655]
+            - cell "Referencia 2026042015183010992282878" [ref=e656]:
+              - text: Referencia
+              - code [ref=e283]: "2026042015183010992282878"
+            - cell "Teléfono 0" [ref=e657]
+            - cell "Cliente Rafael Alberto Alva" [ref=e658]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e659]
+            - cell "Monto ¢5,00" [ref=e660]
+            - cell "Motivo PAGO-89447204" [ref=e661]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e662]:
+              - text: Estado
+              - generic [ref=e663]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 18/04/2026 17:45 Proyecto Etelgive Referencia 2026041815183010973675699 Teléfono 0 Cliente Jenny Otilia De Jes Entidad Banco Nacional de Costa Rica Monto ¢8 000,00 Motivo pago-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e664]:
+            - cell "Fecha/Hora 18/04/2026 17:45" [ref=e665]
+            - cell "Proyecto Etelgive" [ref=e666]
+            - cell "Referencia 2026041815183010973675699" [ref=e667]:
+              - text: Referencia
+              - code [ref=e294]: "2026041815183010973675699"
+            - cell "Teléfono 0" [ref=e668]
+            - cell "Cliente Jenny Otilia De Jes" [ref=e669]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e670]
+            - cell "Monto ¢8 000,00" [ref=e671]
+            - cell "Motivo pago-89447204" [ref=e672]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e673]:
+              - text: Estado
+              - generic [ref=e674]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 18/04/2026 14:17 Proyecto Etelgive Referencia 2026041815183010970736791 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢15,00 Motivo PAGO-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e675]:
+            - cell "Fecha/Hora 18/04/2026 14:17" [ref=e676]
+            - cell "Proyecto Etelgive" [ref=e677]
+            - cell "Referencia 2026041815183010970736791" [ref=e678]:
+              - text: Referencia
+              - code [ref=e305]: "2026041815183010970736791"
+            - cell "Teléfono 0" [ref=e679]
+            - cell "Cliente Rafael Alberto Alva" [ref=e680]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e681]
+            - cell "Monto ¢15,00" [ref=e682]
+            - cell "Motivo PAGO-89447204" [ref=e683]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e684]:
+              - text: Estado
+              - generic [ref=e685]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 18/04/2026 12:24 Proyecto Etelgive Referencia 2026041815183010969020610 Teléfono 0 Cliente Enid Trejos Barahon Entidad Banco Nacional de Costa Rica Monto ¢35 000,00 Motivo transferencia -89447 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e686]:
+            - cell "Fecha/Hora 18/04/2026 12:24" [ref=e687]
+            - cell "Proyecto Etelgive" [ref=e688]
+            - cell "Referencia 2026041815183010969020610" [ref=e689]:
+              - text: Referencia
+              - code [ref=e316]: "2026041815183010969020610"
+            - cell "Teléfono 0" [ref=e690]
+            - cell "Cliente Enid Trejos Barahon" [ref=e691]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e692]
+            - cell "Monto ¢35 000,00" [ref=e693]
+            - cell "Motivo transferencia -89447" [ref=e694]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e695]:
+              - text: Estado
+              - generic [ref=e696]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 18/04/2026 11:09 Proyecto Etelgive Referencia 2026041815183010967771542 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢20,00 Motivo pago-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e697]:
+            - cell "Fecha/Hora 18/04/2026 11:09" [ref=e698]
+            - cell "Proyecto Etelgive" [ref=e699]
+            - cell "Referencia 2026041815183010967771542" [ref=e700]:
+              - text: Referencia
+              - code [ref=e327]: "2026041815183010967771542"
+            - cell "Teléfono 0" [ref=e701]
+            - cell "Cliente Rafael Alberto Alva" [ref=e702]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e703]
+            - cell "Monto ¢20,00" [ref=e704]
+            - cell "Motivo pago-89447204" [ref=e705]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e706]:
+              - text: Estado
+              - generic [ref=e707]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 17/04/2026 14:50 Proyecto Etelgive Referencia 2026041715284001980457491 Teléfono 00000000 Cliente Moreira Benavides Rodolfo Entidad Banco de Costa Rica Monto ¢15 000,00 Motivo Transferencia SINPE Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e708]:
+            - cell "Fecha/Hora 17/04/2026 14:50" [ref=e709]
+            - cell "Proyecto Etelgive" [ref=e710]
+            - cell "Referencia 2026041715284001980457491" [ref=e711]:
+              - text: Referencia
+              - code [ref=e338]: "2026041715284001980457491"
+            - cell "Teléfono 00000000" [ref=e712]
+            - cell "Cliente Moreira Benavides Rodolfo" [ref=e713]
+            - cell "Entidad Banco de Costa Rica" [ref=e714]
+            - cell "Monto ¢15 000,00" [ref=e715]
+            - cell "Motivo Transferencia SINPE" [ref=e716]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e717]:
+              - text: Estado
+              - generic [ref=e718]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 17/04/2026 14:39 Proyecto Etelgive Referencia 2026041715183010957517827 Teléfono 0 Cliente Maria Odilie Montoy Entidad Banco Nacional de Costa Rica Monto ¢200,00 Motivo papel chinilla -8944 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e719]:
+            - cell "Fecha/Hora 17/04/2026 14:39" [ref=e720]
+            - cell "Proyecto Etelgive" [ref=e721]
+            - cell "Referencia 2026041715183010957517827" [ref=e722]:
+              - text: Referencia
+              - code [ref=e349]: "2026041715183010957517827"
+            - cell "Teléfono 0" [ref=e723]
+            - cell "Cliente Maria Odilie Montoy" [ref=e724]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e725]
+            - cell "Monto ¢200,00" [ref=e726]
+            - cell "Motivo papel chinilla -8944" [ref=e727]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e728]:
+              - text: Estado
+              - generic [ref=e729]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 17/04/2026 13:21 Proyecto Etelgive Referencia 2026041715183010956385660 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢10,00 Motivo PAGO -89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e730]:
+            - cell "Fecha/Hora 17/04/2026 13:21" [ref=e731]
+            - cell "Proyecto Etelgive" [ref=e732]
+            - cell "Referencia 2026041715183010956385660" [ref=e733]:
+              - text: Referencia
+              - code [ref=e360]: "2026041715183010956385660"
+            - cell "Teléfono 0" [ref=e734]
+            - cell "Cliente Rafael Alberto Alva" [ref=e735]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e736]
+            - cell "Monto ¢10,00" [ref=e737]
+            - cell "Motivo PAGO -89447204" [ref=e738]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e739]:
+              - text: Estado
+              - generic [ref=e740]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 17/04/2026 09:31 Proyecto Etelgive Referencia 2026041715183010952906576 Teléfono 0 Cliente David Gerardo Rojas Entidad Banco Nacional de Costa Rica Monto ¢400,00 Motivo regalo -89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e741]:
+            - cell "Fecha/Hora 17/04/2026 09:31" [ref=e742]
+            - cell "Proyecto Etelgive" [ref=e743]
+            - cell "Referencia 2026041715183010952906576" [ref=e744]:
+              - text: Referencia
+              - code [ref=e371]: "2026041715183010952906576"
+            - cell "Teléfono 0" [ref=e745]
+            - cell "Cliente David Gerardo Rojas" [ref=e746]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e747]
+            - cell "Monto ¢400,00" [ref=e748]
+            - cell "Motivo regalo -89447204" [ref=e749]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e750]:
+              - text: Estado
+              - generic [ref=e751]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 16/04/2026 18:00 Proyecto Etelgive Referencia 2026041682183010494383775 Teléfono 83080428 Cliente Benavides Jimenez Vi Entidad Caja de ANDE Monto ¢19 200,00 Motivo Esta transacción fue realizada el 16/04/2026 a las 6:00 PM Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e752]:
+            - cell "Fecha/Hora 16/04/2026 18:00" [ref=e753]
+            - cell "Proyecto Etelgive" [ref=e754]
+            - cell "Referencia 2026041682183010494383775" [ref=e755]:
+              - text: Referencia
+              - code [ref=e382]: "2026041682183010494383775"
+            - cell "Teléfono 83080428" [ref=e756]
+            - cell "Cliente Benavides Jimenez Vi" [ref=e757]
+            - cell "Entidad Caja de ANDE" [ref=e758]
+            - cell "Monto ¢19 200,00" [ref=e759]
+            - cell "Motivo Esta transacción fue realizada el 16/04/2026 a las 6:00 PM" [ref=e760]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e761]:
+              - text: Estado
+              - generic [ref=e762]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 16/04/2026 17:58 Proyecto Etelgive Referencia 2026041615183010947125991 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢50,00 Motivo Pago-89447204 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e763]:
+            - cell "Fecha/Hora 16/04/2026 17:58" [ref=e764]
+            - cell "Proyecto Etelgive" [ref=e765]
+            - cell "Referencia 2026041615183010947125991" [ref=e766]:
+              - text: Referencia
+              - code [ref=e393]: "2026041615183010947125991"
+            - cell "Teléfono 0" [ref=e767]
+            - cell "Cliente Rafael Alberto Alva" [ref=e768]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e769]
+            - cell "Monto ¢50,00" [ref=e770]
+            - cell "Motivo Pago-89447204" [ref=e771]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e772]:
+              - text: Estado
+              - generic [ref=e773]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 16/04/2026 17:47 Proyecto Etelgive Referencia 2026041610283001184485924 Teléfono 0 Cliente Alejandra Maria Arro Entidad Banco BAC San José Monto ¢1 350,00 Motivo Sin Descripcion Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e774]:
+            - cell "Fecha/Hora 16/04/2026 17:47" [ref=e775]
+            - cell "Proyecto Etelgive" [ref=e776]
+            - cell "Referencia 2026041610283001184485924" [ref=e777]:
+              - text: Referencia
+              - code [ref=e404]: "2026041610283001184485924"
+            - cell "Teléfono 0" [ref=e778]
+            - cell "Cliente Alejandra Maria Arro" [ref=e779]
+            - cell "Entidad Banco BAC San José" [ref=e780]
+            - cell "Monto ¢1 350,00" [ref=e781]
+            - cell "Motivo Sin Descripcion" [ref=e782]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e783]:
+              - text: Estado
+              - generic [ref=e784]: SINPEMOVIL - Notificación de transacción realizada
+          - row "Fecha/Hora 16/04/2026 16:13 Proyecto Etelgive Referencia 2026041615183010945536678 Teléfono 0 Cliente Rafael Alberto Alva Entidad Banco Nacional de Costa Rica Monto ¢100,00 Motivo Pago de cola-8944720 Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e785]:
+            - cell "Fecha/Hora 16/04/2026 16:13" [ref=e786]
+            - cell "Proyecto Etelgive" [ref=e787]
+            - cell "Referencia 2026041615183010945536678" [ref=e788]:
+              - text: Referencia
+              - code [ref=e415]: "2026041615183010945536678"
+            - cell "Teléfono 0" [ref=e789]
+            - cell "Cliente Rafael Alberto Alva" [ref=e790]
+            - cell "Entidad Banco Nacional de Costa Rica" [ref=e791]
+            - cell "Monto ¢100,00" [ref=e792]
+            - cell "Motivo Pago de cola-8944720" [ref=e793]
+            - cell "Estado SINPEMOVIL - Notificación de transacción realizada" [ref=e794]:
+              - text: Estado
+              - generic [ref=e795]: SINPEMOVIL - Notificación de transacción realizada

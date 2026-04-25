@@ -58,14 +58,16 @@
             .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #333; padding: 8px; max-height: auto; overflow-x: visible; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
             .sidebar h2 { grid-column: 1 / 2; grid-row: 1; margin-bottom: 0; white-space: nowrap; font-size: 11px; }
             .sidebar > .status-indicator { grid-column: 2; grid-row: 1; margin-left: 0; margin-bottom: 0; justify-self: end; }
-            .sidebar > .project-btn:nth-child(3) { grid-column: 1; grid-row: 2; width: calc(50% - 3px); }
-            .sidebar > .project-btn:nth-child(4) { grid-column: 2; grid-row: 2; width: calc(50% - 3px); }
+            .sidebar > .project-btn:nth-child(3) { grid-column: 1; grid-row: 2; }
+            .sidebar > .project-btn:nth-child(4) { grid-column: 2; grid-row: 2; }
             .sidebar > .project-info { grid-column: 1 / -1; grid-row: 3; }
             .sidebar > button[onclick*="sync"] { grid-column: 1 / -1; grid-row: 4; }
-            .sidebar > .project-btn { width: calc(50% - 3px) !important; flex: 0 0 calc(50% - 3px) !important; padding: 6px 4px !important; font-size: 10px !important; margin-bottom: 0 !important; min-height: 45px !important; }
+            .sidebar > .project-btn { width: 100% !important; padding: 6px 4px !important; font-size: 10px !important; margin-bottom: 0 !important; min-height: 45px !important; gap: 4px !important; overflow: hidden !important; }
+            .sidebar > .project-btn.active { padding: 6px 4px !important; min-height: 45px !important; }
+            .sidebar > .project-btn.active img { border: none !important; padding: 4px !important; }
             .project-btn > div { display: block; font-size: 9px; }
             .project-name { font-weight: 600; }
-            .project-btn img { height: 32px; width: 32px; }
+            .project-btn img { height: 32px; width: 32px; padding: 4px !important; }
             .sidebar > .project-info { width: 100%; }
             .sidebar > button[onclick*="sync"] { width: 100%; }
             .content { padding: 10px; overflow-y: auto; }
