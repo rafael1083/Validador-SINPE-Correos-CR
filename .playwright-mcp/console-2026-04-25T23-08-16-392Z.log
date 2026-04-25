@@ -1,2 +1,7 @@
 [     382ms] [LOG] ✓ Socket.IO conectado @ http://localhost:3001/:285
 [     398ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3001/favicon.ico:0
+[  313084ms] [LOG] 📨 Nueva transacción: Multichunches @ http://localhost:3001/:297
+[  313132ms] [LOG] 📨 Nueva transacción: Etelgive @ http://localhost:3001/:297
+[  359911ms] [LOG] 📨 Nueva transacción: Multichunches @ http://localhost:3001/:297
+[ 1093930ms] [LOG] 📨 Nueva transacción: Multichunches @ http://localhost:3001/:297
+[ 1094009ms] [LOG] 📨 Nueva transacción: Etelgive @ http://localhost:3001/:297

@@ -13,13 +13,22 @@ PASO 1: Hacer cambios en el código
   - Probar localmente con: npm run dev
   - Verificar tests: npm test
 
-PASO 2: Publicar cambios a GitHub
+PASO 2: Publicar cambios a GitHub (AUTOMATIZADO)
   - Ejecutar: 1.publicar.bat
 
-  Este script hace:
-    ✓ Pushea cambios a rama 'dev' en GitHub
-    ✓ Sincroniza rama 'main' desde 'dev' (merge)
-    ✓ Regresa a rama 'dev' localmente
+  Este script hace AUTOMATICAMENTE:
+    ✓ [1] Inicializa repositorio (si es primera vez)
+    ✓ [2] Ejecuta npm test (validación)
+    ✓ [3] Agrega cambios a rama 'dev'
+    ✓ [4] Pushea cambios a GitHub dev
+    ✓ [5] Sincroniza rama 'main' desde 'dev' (merge)
+    ✓ [6] Pushea main a GitHub
+    ✓ [7] Ejecuta npm install (actualiza deps)
+
+  Flujo:
+    - Si tests FALLAN: pregunta si continuar (S/N)
+    - Si tests PASAN: continúa automáticamente
+    - Si hay error: detiene y pide acción manual
 
   Resultado: GitHub main tiene los cambios listos
 
