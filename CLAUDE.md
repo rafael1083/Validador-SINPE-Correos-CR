@@ -17,9 +17,10 @@ Sistema Node.js/TypeScript que valida transacciones SINPE Móvil del banco BCR e
 ### 2. **Parseo de Emails**
 - **Etelgive**: Busca asunto `RV: SINPEMOVIL` de BCR
   - Extrae: referencia, teléfono, nombre cliente, entidad, monto, motivo
-- **Multichunches**: Busca asuntos con `SINPE` o `BN`
-  - Soporta formato Banco Nacional (BN) y BCR
+- **Multichunches**: Busca correos que contengan estrictamente `BN SINPE MOVIL` en el cuerpo
+  - Soporta formato Banco Nacional (BN) y BCR con referencia real
   - Valida que sea acreditación (no débito)
+  - Ignora notificaciones genéricas "BN informa" para evitar duplicados
 - Limpieza inteligente de montos (soporta múltiples formatos numéricos)
 - Normalización de nombres (title case, sin caracteres especiales)
 
@@ -207,5 +208,5 @@ elmensajero@bancobcr.com,SINPEMOVIL
 
 ---
 
-**Última actualización**: 2026-04-21 (Limpieza automática de registros QA)
+**Última actualización**: 2026-04-29 (Corrección de duplicados BN - Multichunches)
 **Estado**: Operativo | Tests con limpieza automática activa | 30+ casos de prueba

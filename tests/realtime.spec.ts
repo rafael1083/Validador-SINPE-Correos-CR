@@ -5,7 +5,7 @@ import * as path from 'path';
 test.describe('QA - Tiempo Real con Socket.IO', () => {
   test('QA-REAL: Crear SINPE ficticio → Aparece en tiempo real → Eliminar', async ({ page, context }) => {
     // Abrir página
-    await page.goto('http://localhost:3002');
+    await page.goto('http://localhost:3001');
     await page.waitForLoadState('domcontentloaded');
     await page.waitForTimeout(1000);
 
@@ -23,7 +23,7 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
 
     // === PASO 1: CREAR SINPE FICTICIO ===
     console.log('\n📧 PASO 1: Crear SINPE ficticio...');
-    const createResponse = await context.request.post('http://localhost:3002/api/test/create-sinpe');
+    const createResponse = await context.request.post('http://localhost:3001/api/test/create-sinpe');
     const createData = await createResponse.json();
     const testRef = createData.referencia;
 
@@ -64,7 +64,7 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
     // === PASO 3: ELIMINAR SINPE ===
     console.log('\n🗑️  PASO 3: Eliminar SINPE ficticio...');
     const deleteResponse = await context.request.delete(
-      `http://localhost:3002/api/test/delete-sinpe/${testRef}`
+      `http://localhost:3001/api/test/delete-sinpe/${testRef}`
     );
 
     expect(deleteResponse.ok()).toBeTruthy();
@@ -106,14 +106,14 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
     const page2 = await context.newPage();
 
     // Tab 1: Ir a Multichunches
-    await page.goto('http://localhost:3002');
+    await page.goto('http://localhost:3001');
     await page.waitForLoadState('domcontentloaded');
     await page.locator('button.project-btn').nth(1).click();
     await page.click('button:has-text("Buscar Todos")');
     await page.waitForTimeout(1000);
 
     // Tab 2: Ir a Multichunches también
-    await page2.goto('http://localhost:3002');
+    await page2.goto('http://localhost:3001');
     await page2.waitForLoadState('domcontentloaded');
     await page2.locator('button.project-btn').nth(1).click();
     await page2.click('button:has-text("Buscar Todos")');
@@ -127,7 +127,7 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
 
     // Crear SINPE en una tab
     console.log('\n📧 Crear SINPE en Tab 1...');
-    const createResp = await context.request.post('http://localhost:3002/api/test/create-sinpe');
+    const createResp = await context.request.post('http://localhost:3001/api/test/create-sinpe');
     const createData = await createResp.json();
     const testRef = createData.referencia;
 
@@ -165,7 +165,7 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
     console.log(`✅ Socket.IO propagó cambio a ambas tabs`);
 
     // Limpiar: eliminar el SINPE
-    await context.request.delete(`http://localhost:3002/api/test/delete-sinpe/${testRef}`);
+    await context.request.delete(`http://localhost:3001/api/test/delete-sinpe/${testRef}`);
 
     await page2.close();
   });

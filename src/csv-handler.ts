@@ -1,6 +1,7 @@
 import { createObjectCsvWriter } from 'csv-writer';
 import fs from 'fs';
 import path from 'path';
+import logger from './logger';
 
 export interface SinpeTransaction {
     fecha: string;
@@ -37,7 +38,7 @@ function loadProcessed(project: string) {
         });
     }
     processedByProject.set(project, set);
-    console.log(`[CSV] Cargado ${project}: ${set.size} referencias`);
+    logger.info(`[CSV] Cargado ${project}: ${set.size} referencias`);
 }
 
 // Cargar inicial
@@ -52,7 +53,7 @@ export async function saveTransaction(tx: SinpeTransaction, project: string): Pr
     const isNewBetter = tx.nombreOrigen !== 'Desconocido' || tx.telefonoOrigen !== '0';
     
     if (projectSet.has(id) && !isNewBetter) {
-        console.log(`[CSV][${project}] Transacción duplicada omitida: ${id}`);
+        logger.info(`[CSV][${project}] Transacción duplicada omitida: ${id}`);
         return false;
     }
 
@@ -72,13 +73,13 @@ export async function saveTransaction(tx: SinpeTransaction, project: string): Pr
             if (!fs.existsSync(csvPath)) {
                 const header = 'FECHA,NUMERO_REFERENCIA,TELEFONO_ORIGEN,NOMBRE_CLIENTE_ORIGEN,ENTIDAD_ORIGEN,MONTO,MOTIVO,PROYECTO,ESTADO\n';
                 fs.writeFileSync(csvPath, header + row + '\n');
-                console.log(`[CSV][${project}] Archivo creado y transacción guardada: ${id}`);
+                logger.info(`[CSV][${project}] Archivo creado y transacción guardada: ${id}`);
             } else {
                 fs.appendFileSync(csvPath, row + '\n');
-                console.log(`[CSV][${project}] Transacción agregada: ${id}`);
+                logger.info(`[CSV][${project}] Transacción agregada: ${id}`);
             }
         } catch (writeError: any) {
-            console.error(`[CSV][${project}] ERROR escribiendo archivo: ${writeError.message}`);
+            logger.error(`[CSV][${project}] ERROR escribiendo archivo: ${writeError.message}`);
             return false;
         }
 
@@ -100,20 +101,20 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
         pathsToRead.push(path.join(dataDir, 'sinpes.csv'));
     }
 
-    console.log(`[CSV] Leyendo transacciones... paths: ${pathsToRead.length}`);
+    logger.info(`[CSV] Leyendo transacciones... paths: ${pathsToRead.length}`);
     for (const csvPath of pathsToRead) {
         if (!fs.existsSync(csvPath)) {
-            console.log(`[CSV] No existe: ${csvPath}`);
+            logger.info(`[CSV] No existe: ${csvPath}`);
             continue;
         }
-        console.log(`[CSV] Leyendo: ${csvPath}`);
+        logger.info(`[CSV] Leyendo: ${csvPath}`);
         
         try {
             const content = fs.readFileSync(csvPath, 'utf8');
             const lines = content.split('\n').filter(line => line.trim() !== '');
             const dataLines = lines[0].includes('FECHA') ? lines.slice(1) : lines;
 
-            console.log(`[CSV] ${csvPath}: ${lines.length} líneas totales, ${dataLines.length} datos`);
+            logger.info(`[CSV] ${csvPath}: ${lines.length} líneas totales, ${dataLines.length} datos`);
 
             const pTransactions = dataLines.map(line => {
                 const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
@@ -132,7 +133,7 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
             });
             all = all.concat(pTransactions);
         } catch (error) {
-            console.error(`[CSV] Error leyendo transacciones de ${csvPath}:`, error);
+            logger.error(`[CSV] Error leyendo transacciones de ${csvPath}:`, error);
         }
     }
     
@@ -166,6 +167,7 @@ export async function syncAndCreateCSV(): Promise<void> {
 
         // Actualizar cache después de escribir
         loadProcessed(project);
-        console.log(`[SYNC] CSV recreado: ${project} (${transactions.length} registros)`);
+        logger.info(`[SYNC] CSV recreado: ${project} (${transactions.length} registros)`);
     }
 }
+

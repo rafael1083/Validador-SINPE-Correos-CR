@@ -24,3 +24,15 @@ console.log(JSON.stringify(res1, null, 2));
 console.log('\n--- TEST EMAIL 2 ---');
 const res2 = parseSinpeEmail(email2, new Date(), 'Multichunches');
 console.log(JSON.stringify(res2, null, 2));
+
+const email3 = `
+Notificación BN
+-------------------
+Ha recibido ¢5,000 por BN SINPE MOVIL de MARIA PEREZ. Pago de servicio. Referencia 2026042515283009381805999.
+---—---------------
+SINPE Multichunches
+`;
+
+console.log('\n--- TEST EMAIL 3 (Simbolo ¢) ---');
+const res3 = parseSinpeEmail(email3, new Date(), 'Multichunches');
+console.log(JSON.stringify(res3, null, 2));

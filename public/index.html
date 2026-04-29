@@ -141,6 +141,7 @@
                 <div class="tabs">
                     <button class="tab-button active" onclick="switchTab('transactions')">Transacciones</button>
                     <button class="tab-button" onclick="switchTab('config')">Configuración</button>
+                    <button class="tab-button" onclick="switchTab('formatsTab')">Formato</button>
                 </div>
             </div>
 
@@ -168,6 +169,25 @@
                     <button onclick="alert('Requiere guardado en servidor')">Guardar</button>
                 </div>
             </div>
+
+            <div id="formatsTab" class="tab-content">
+                <div class="config-form">
+                    <h2 style="margin-bottom: 15px;">Ejemplos de Formato (Plantillas)</h2>
+                    <p style="color: #888; margin-bottom: 15px; font-size: 13px;">Pega aquí un ejemplo real de correo para referencia y validación visual.</p>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #0099ff;">Etelgive (BCR):</label>
+                        <textarea id="formatEtelgive" rows="8" placeholder="Ejemplo de correo BCR..."></textarea>
+                        <button onclick="saveIndividualFormat('Etelgive')" style="margin-top: 5px; padding: 5px 15px; font-size: 12px; background: #333; border: 1px solid #0099ff;">💾 Guardar Etelgive</button>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #0099ff;">Multichunches (BN):</label>
+                        <textarea id="formatMultichunches" rows="8" placeholder="Ejemplo de correo BN..."></textarea>
+                        <button onclick="saveIndividualFormat('Multichunches')" style="margin-top: 5px; padding: 5px 15px; font-size: 12px; background: #333; border: 1px solid #0099ff;">💾 Guardar Multichunches</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
@@ -192,6 +212,81 @@
             document.getElementById(tab).classList.add('active');
             event.target.classList.add('active');
             if (tab === 'transactions') loadTransactions();
+            if (tab === 'formatsTab') loadFormats();
+        }
+
+        async function loadFormats() {
+            try {
+                const response = await fetch('/api/formats');
+                const formats = await response.json();
+                document.getElementById('formatEtelgive').value = formats.Etelgive || '';
+                document.getElementById('formatMultichunches').value = formats.Multichunches || '';
+            } catch (error) {
+                console.error('Error cargando formatos:', error);
+            }
+        }
+
+        async function saveIndividualFormat(project) {
+            const id = 'format' + project;
+            const content = document.getElementById(id).value;
+            const btn = event.target;
+            
+            try {
+                btn.disabled = true;
+                const originalText = btn.textContent;
+                btn.textContent = '⏳ ...';
+                
+                const response = await fetch('/api/formats/' + project, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ content })
+                });
+
+                if (!response.ok) throw new Error('Error al guardar');
+                
+                btn.textContent = '✅ OK';
+                btn.style.borderColor = '#00ff88';
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                    btn.style.borderColor = '#0099ff';
+                }, 2000);
+            } catch (error) {
+                alert('Error: ' + error.message);
+                btn.disabled = false;
+                btn.textContent = '❌ Error';
+            }
+        }
+
+        async function saveFormats() {
+            const btn = document.getElementById('btnSaveFormats');
+            try {
+                btn.disabled = true;
+                btn.textContent = '⏳ Guardando...';
+                
+                const formats = {
+                    Etelgive: document.getElementById('formatEtelgive').value,
+                    Multichunches: document.getElementById('formatMultichunches').value
+                };
+
+                const response = await fetch('/api/formats', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formats)
+                });
+
+                if (!response.ok) throw new Error('Error al guardar');
+                
+                btn.textContent = '✅ Guardado';
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = '💾 Guardar Formatos';
+                }, 2000);
+            } catch (error) {
+                alert('Error: ' + error.message);
+                btn.disabled = false;
+                btn.textContent = '💾 Guardar Formatos';
+            }
         }
 
         function formatDateTime(isoDate) {

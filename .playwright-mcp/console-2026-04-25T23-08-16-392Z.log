@@ -5,3 +5,4 @@
 [  359911ms] [LOG] 📨 Nueva transacción: Multichunches @ http://localhost:3001/:297
 [ 1093930ms] [LOG] 📨 Nueva transacción: Multichunches @ http://localhost:3001/:297
 [ 1094009ms] [LOG] 📨 Nueva transacción: Etelgive @ http://localhost:3001/:297
+[ 3401121ms] [LOG] ✗ Socket.IO desconectado @ http://localhost:3001/:291

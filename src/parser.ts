@@ -10,30 +10,51 @@ function toProperName(raw: string): string {
         .replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function normalizeMonto(raw: string): string {
+    let clean = raw.trim().replace(/\s/g, '');
+    if (clean.includes('.') && clean.includes(',')) {
+        const lastCommaIdx = clean.lastIndexOf(',');
+        const lastDotIdx = clean.lastIndexOf('.');
+        if (lastCommaIdx > lastDotIdx) {
+            clean = clean.replace(/\./g, '').replace(/,/g, '.');
+        } else {
+            clean = clean.replace(/,/g, '').replace(/\./g, '.');
+        }
+    } else if (clean.includes(',')) {
+        const parts = clean.split(',');
+        if (parts.length > 1 && parts[parts.length - 1].length === 3) {
+            clean = clean.replace(/,/g, '');
+        } else {
+            clean = clean.replace(/,/g, '.');
+        }
+    }
+    return clean;
+}
+
 export function parseSinpeEmail(body: string, emailDate: Date, project: 'Etelgive' | 'Multichunches'): SinpeTransaction | null {
     try {
         const clean = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
 
         if (project === 'Multichunches') {
-            // BN: Ha recibido 40000 colones por ... de NOMBRE. concepto. Referencia 123
-            const bnMonto = clean.match(/Ha\s+recibido\s+([\d,\.]+)\s+colones/i);
+            // Requerir estrictamente "BN SINPE MOVIL" en el cuerpo
+            if (!clean.includes('BN SINPE MOVIL')) {
+                return null;
+            }
+
+            // Formato 1 (SINPE MOVIL BN): Ha recibido 2700 colones por BN SINPE MOVIL de ALVAREZ BUSTOS MARIA. Varios. Referencia 123
+            const bnMonto = clean.match(/Ha\s+recibido\s+(?:¢|colones|colS)?\s*([\d,\.]+)\s*(?:colones|colS)?\s+por\s+BN\s+SINPE\s+MOVIL/i);
+            
             const bnRef = clean.match(/Referencia\s+(\d+)/i);
             const bnNombreMatch = clean.match(/de\s+([^.]+)/i);
-            const conceptoMatch = clean.match(/de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i);
+            
+            // Concepto: después del nombre y antes de la referencia
+            const conceptoMatch = clean.match(/de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i) 
+                                 || clean.match(/por\s+BN\s+SINPE\s+MOVIL\s+de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i);
 
             if (bnRef && bnMonto) {
                 let cleanMonto = bnMonto[1].trim().replace(/\s/g, '');
-                if (cleanMonto.includes('.') && cleanMonto.includes(',')) {
-                    const lastCommaIdx = cleanMonto.lastIndexOf(',');
-                    const lastDotIdx = cleanMonto.lastIndexOf('.');
-                    if (lastCommaIdx > lastDotIdx) {
-                        cleanMonto = cleanMonto.replace(/\./g, '').replace(/,/g, '.');
-                    } else {
-                        cleanMonto = cleanMonto.replace(/,/g, '').replace(/\./g, '.');
-                    }
-                } else if (cleanMonto.includes(',')) {
-                    cleanMonto = cleanMonto.replace(/,/g, '.');
-                }
+                cleanMonto = normalizeMonto(cleanMonto);
+                
                 const nombre = bnNombreMatch ? bnNombreMatch[1].trim() : 'Desconocido';
                 const concepto = conceptoMatch ? conceptoMatch[1].trim() : 'SINPE Multichunches';
 
@@ -68,17 +89,7 @@ export function parseSinpeEmail(body: string, emailDate: Date, project: 'Etelgiv
 
             if (bcrRef) {
                 let cleanMonto = bcrMonto ? bcrMonto[1].trim().replace(/\s/g, '') : '0';
-                if (cleanMonto.includes('.') && cleanMonto.includes(',')) {
-                    const lastCommaIdx = cleanMonto.lastIndexOf(',');
-                    const lastDotIdx = cleanMonto.lastIndexOf('.');
-                    if (lastCommaIdx > lastDotIdx) {
-                        cleanMonto = cleanMonto.replace(/\./g, '').replace(/,/g, '.');
-                    } else {
-                        cleanMonto = cleanMonto.replace(/,/g, '').replace(/\./g, '.');
-                    }
-                } else if (cleanMonto.includes(',')) {
-                    cleanMonto = cleanMonto.replace(/,/g, '.');
-                }
+                cleanMonto = normalizeMonto(cleanMonto);
 
                 return {
                     fecha: emailDate.toISOString(),

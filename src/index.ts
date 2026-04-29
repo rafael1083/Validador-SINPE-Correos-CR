@@ -4,12 +4,15 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import path from 'path';
+import fs from 'fs';
 import { loadConfig, EmailAccount } from './config';
 import { parseSinpeEmail } from './parser';
 import { saveTransaction, getAllTransactions, syncAndCreateCSV } from './csv-handler';
+import logger from './logger';
 
 const config = loadConfig();
 const app = express();
+app.use(express.json());
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 let watchers: any[] = [];
@@ -17,12 +20,40 @@ let watchers: any[] = [];
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/logos', express.static(path.join(__dirname, '../logos')));
 
+app.get('/api/formats', (req, res) => {
+    try {
+        const etelgivePath = path.join(__dirname, '../data/format_etelgive.txt');
+        const multichunchesPath = path.join(__dirname, '../data/format_multichunches.txt');
+        
+        const etelgive = fs.existsSync(etelgivePath) ? fs.readFileSync(etelgivePath, 'utf8') : '';
+        const multichunches = fs.existsSync(multichunchesPath) ? fs.readFileSync(multichunchesPath, 'utf8') : '';
+        
+        res.json({ Etelgive: etelgive, Multichunches: multichunches });
+    } catch (error) {
+        res.status(500).json({ error: 'Error al leer formatos' });
+    }
+});
+
+app.post('/api/formats/:project', (req, res) => {
+    try {
+        const project = req.params.project.toLowerCase();
+        const content = req.body.content;
+        const filePath = path.join(__dirname, `../data/format_${project}.txt`);
+        
+        fs.writeFileSync(filePath, content);
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: 'Error al guardar formato' });
+    }
+});
+
 app.get('/api/transactions', async (req, res) => {
     try {
         const project = req.query.project as string;
         const transactions = await getAllTransactions(project);
         res.json(transactions);
     } catch (error) {
+        logger.error('Error al obtener transacciones:', error);
         res.status(500).json({ error: 'Error al obtener transacciones' });
     }
 });
@@ -45,6 +76,7 @@ app.get('/api/transactions/week', async (req, res) => {
 
         res.json(weekTransactions);
     } catch (error) {
+        logger.error('Error al obtener transacciones de la semana:', error);
         res.status(500).json({ error: 'Error al obtener transacciones de la semana' });
     }
 });
@@ -74,6 +106,7 @@ app.get('/api/transactions/week/csv', async (req, res) => {
         res.setHeader('Content-Disposition', `attachment; filename="transacciones_semana_${today.toISOString().split('T')[0]}.csv"`);
         res.send(header + rows);
     } catch (error) {
+        logger.error('Error al descargar CSV semanal:', error);
         res.status(500).json({ error: 'Error al descargar CSV' });
     }
 });
@@ -94,6 +127,7 @@ app.get('/api/transactions/month', async (req, res) => {
 
         res.json(monthTransactions);
     } catch (error) {
+        logger.error('Error al obtener transacciones del mes:', error);
         res.status(500).json({ error: 'Error al obtener transacciones del mes' });
     }
 });
@@ -123,6 +157,7 @@ app.get('/api/transactions/month/csv', async (req, res) => {
         res.setHeader('Content-Disposition', `attachment; filename="transacciones_mes_${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}.csv"`);
         res.send(header + rows);
     } catch (error) {
+        logger.error('Error al descargar CSV mensual:', error);
         res.status(500).json({ error: 'Error al descargar CSV' });
     }
 });
@@ -143,13 +178,14 @@ app.post('/api/test/create-sinpe', async (req, res) => {
 
         const saved = await saveTransaction(testTx, 'Multichunches');
         if (saved) {
-            console.log(`[TEST] SINPE ficticio creado: ${testTx.referencia}`);
+            logger.info(`[TEST] SINPE ficticio creado: ${testTx.referencia}`);
             io.emit('new-transaction', testTx);
             res.json({ success: true, referencia: testTx.referencia, transaction: testTx });
         } else {
             res.status(500).json({ error: 'No se pudo guardar' });
         }
     } catch (error: any) {
+        logger.error('[TEST] Error al crear SINPE ficticio:', error);
         res.status(500).json({ error: error.message });
     }
 });
@@ -170,13 +206,14 @@ app.post('/api/test/create-sinpe-etelgive', async (req, res) => {
 
         const saved = await saveTransaction(testTx, 'Etelgive');
         if (saved) {
-            console.log(`[TEST] SINPE Etelgive ficticio creado: ${testTx.referencia}`);
+            logger.info(`[TEST] SINPE Etelgive ficticio creado: ${testTx.referencia}`);
             io.emit('new-transaction', testTx);
             res.json({ success: true, referencia: testTx.referencia, transaction: testTx });
         } else {
             res.status(500).json({ error: 'No se pudo guardar' });
         }
     } catch (error: any) {
+        logger.error('[TEST] Error al crear SINPE Etelgive ficticio:', error);
         res.status(500).json({ error: error.message });
     }
 });
@@ -208,23 +245,24 @@ app.delete('/api/test/delete-sinpe/:referencia', async (req, res) => {
             fs.writeFileSync(csvPath, header + rows + '\n');
         }
 
-        console.log(`[TEST] SINPE eliminado: ${ref}`);
+        logger.info(`[TEST] SINPE eliminado: ${ref}`);
         res.json({ success: true, message: `Referencia ${ref} eliminada`, remaining: filtered.length });
     } catch (error: any) {
+        logger.error('[TEST] Error al eliminar SINPE:', error);
         res.status(500).json({ error: error.message });
     }
 });
 
 app.get('/api/sync-csv', async (req, res) => {
     try {
-        console.log('[SYNC] Iniciando sincronización de CSV...');
+        logger.info('[SYNC] Iniciando sincronización de CSV...');
         await syncAndCreateCSV();
         let allTransactions = await getAllTransactions();
-        console.log(`[SYNC] Total transacciones después sync: ${allTransactions.length}`);
+        logger.info(`[SYNC] Total transacciones después sync: ${allTransactions.length}`);
 
         // Si CSV están vacíos, rescanear correos del mes actual
         if (allTransactions.length === 0) {
-            console.log('[SYNC] CSV vacíos. Rescanear correos del mes actual...');
+            logger.info('[SYNC] CSV vacíos. Rescanear correos del mes actual...');
             const startOfMonth = new Date();
             startOfMonth.setDate(1);
             startOfMonth.setHours(0, 0, 0, 0);
@@ -235,109 +273,165 @@ app.get('/api/sync-csv', async (req, res) => {
                     try {
                         await (watcher as any).scanRescan(startOfMonth);
                     } catch (err) {
-                        console.error(`[SYNC] Error escaneando ${(watcher as any).account.project}:`, err);
+                        logger.error(`[SYNC] Error escaneando ${(watcher as any).account.project}:`, err);
                     }
                 }
             }
 
             allTransactions = await getAllTransactions();
-            console.log(`[SYNC] Total transacciones después rescan: ${allTransactions.length}`);
+            logger.info(`[SYNC] Total transacciones después rescan: ${allTransactions.length}`);
         }
 
         res.json({ success: true, count: allTransactions.length, message: 'CSV sincronizado y recuperado si estaba vacío' });
     } catch (error: any) {
-        console.error('[SYNC] Error:', error);
+        logger.error('[SYNC] Error crítico:', error);
         res.status(500).json({ error: 'Error al sincronizar: ' + error.message });
     }
 });
 
 class SinpeWatcher {
     private client: ImapFlow;
-    private account: EmailAccount;
+    public account: EmailAccount;
+    private heartbeatInterval: NodeJS.Timeout | null = null;
+    private isReconnecting: boolean = false;
 
     constructor(account: EmailAccount) {
         this.account = account;
-        this.client = new ImapFlow({
+        this.client = this.createClient();
+    }
+
+    private createClient() {
+        return new ImapFlow({
             host: 'imap.gmail.com',
-            port: account.port,
+            port: this.account.port,
             secure: true,
-            auth: { user: account.user, pass: account.pass },
-            logger: false
+            auth: { user: this.account.user, pass: this.account.pass },
+            logger: false,
+            greetingTimeout: 30000,
+            connectionTimeout: 30000
         });
     }
 
     async start() {
+        if (this.isReconnecting) return;
+        
         try {
-            // Recrear cliente para evitar reutilización de instancia cerrada
-            this.client = new ImapFlow({
-                host: 'imap.gmail.com',
-                port: this.account.port,
-                secure: true,
-                auth: { user: this.account.user, pass: this.account.pass },
-                logger: false
-            });
+            this.stopHeartbeat();
+            try { await this.client.logout(); } catch (e) {}
+            
+            this.client = this.createClient();
+            this.setupEventHandlers();
 
             await this.client.connect();
-            console.log(`[IMAP][${this.account.project}] Conectado exitosamente.`);
+            logger.info(`[IMAP][${this.account.project}] Conectado exitosamente.`);
+            
             await this.scanRecent();
-            this.setupIdle();
+            await this.setupIdle();
+            this.startHeartbeat();
         } catch (error: any) {
-            console.error(`[ERROR][${this.account.project}] Fallo de conexión:`, error?.message || error);
-            setTimeout(() => this.start(), 30000);
+            logger.error(`[ERROR][${this.account.project}] Fallo de conexión:`, error?.message || error);
+            this.scheduleReconnect();
+        }
+    }
+
+    private setupEventHandlers() {
+        this.client.on('exists', async (data) => {
+            logger.info(`[IMAP][${this.account.project}] Nuevo correo detectado. Total: ${data.count}`);
+            await this.fetchAndProcessLatest(data.count);
+        });
+
+        this.client.on('error', (err) => {
+            logger.error(`[ERROR][${this.account.project}] Error en socket: ${err.message}`);
+            this.scheduleReconnect();
+        });
+
+        this.client.on('close', () => {
+            logger.warn(`[IMAP][${this.account.project}] Conexión cerrada.`);
+            this.scheduleReconnect();
+        });
+    }
+
+    private async fetchAndProcessLatest(count: number) {
+        try {
+            let lock = await this.client.getMailboxLock('INBOX');
+            try {
+                const message = await this.client.fetchOne(`${count}`, { source: true, envelope: true });
+                if (message && message.source) {
+                    logger.info(`[IMAP][${this.account.project}] Procesando correo ${count}...`);
+                    await this.processMessage(message.source);
+                }
+            } finally {
+                lock.release();
+            }
+        } catch (err) {
+            logger.error(`[ERROR][${this.account.project}] Error procesando nuevo correo:`, err);
         }
     }
 
     private async setupIdle() {
-        console.log(`[IMAP][${this.account.project}] IDLE listener registrado.`);
-        this.client.on('exists', async (data) => {
-            console.log(`[IMAP][${this.account.project}] Nuevo correo detectado. Total: ${data.count}`);
-            try {
-                let lock = await this.client.getMailboxLock('INBOX');
-                try {
-                    const message = await this.client.fetchOne(`${data.count}`, { source: true, envelope: true });
-                    if (message && message.source) {
-                        console.log(`[IMAP][${this.account.project}] Procesando correo ${data.count}...`);
-                        await this.processMessage(message.source);
-                    }
-                } finally {
-                    lock.release();
-                }
-            } catch (err) {
-                console.error(`[ERROR][${this.account.project}] Error procesando nuevo correo:`, err);
-            }
-        });
-
-        this.client.on('close', async () => {
-            console.log(`[IMAP][${this.account.project}] Conexión cerrada. Reconectando en 30s...`);
-            setTimeout(() => this.start(), 30000);
-        });
-
         try {
-            await this.client.idle();
-        } catch (err) {
-            console.error(`[ERROR][${this.account.project}] Error en IDLE:`, err);
-            setTimeout(() => this.start(), 30000);
+            this.client.idle().catch(err => {
+                logger.error(`[IMAP][${this.account.project}] Error en IDLE: ${err.message}`);
+                this.scheduleReconnect();
+            });
+            logger.info(`[IMAP][${this.account.project}] IDLE activo.`);
+        } catch (err: any) {
+            logger.error(`[IMAP][${this.account.project}] No se pudo iniciar IDLE: ${err.message}`);
+            this.scheduleReconnect();
         }
     }
 
+    private startHeartbeat() {
+        this.stopHeartbeat();
+        this.heartbeatInterval = setInterval(async () => {
+            try {
+                // Timeout de 30s para el NOOP para evitar quedar en modo zombie
+                const noopPromise = this.client.noop();
+                const timeoutPromise = new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error('Timeout en NOOP')), 30000)
+                );
+
+                await Promise.race([noopPromise, timeoutPromise]);
+                logger.debug(`[IMAP][${this.account.project}] Heartbeat OK`);
+            } catch (err: any) {
+                logger.error(`[IMAP][${this.account.project}] Heartbeat falló: ${err.message}. Reconectando...`);
+                this.scheduleReconnect();
+            }
+        }, 5 * 60 * 1000); // Cada 5 minutos
+    }
+
+    private stopHeartbeat() {
+        if (this.heartbeatInterval) {
+            clearInterval(this.heartbeatInterval);
+            this.heartbeatInterval = null;
+        }
+    }
+
+    private scheduleReconnect() {
+        if (this.isReconnecting) return;
+        this.isReconnecting = true;
+        this.stopHeartbeat();
+        
+        logger.info(`[IMAP][${this.account.project}] Reconectando en 30s...`);
+        setTimeout(async () => {
+            this.isReconnecting = false;
+            await this.start();
+        }, 30000);
+    }
+
     private async scanRecent() {
-        console.log(`[IMAP][${this.account.project}] Escaneando correos recientes...`);
+        logger.info(`[IMAP][${this.account.project}] Escaneando correos recientes...`);
         const startOfMonth = new Date();
         startOfMonth.setDate(1);
 
         let lock = await this.client.getMailboxLock('INBOX');
         try {
-            // Busqueda más flexible para Multichunches
             let searchCriteria: any;
             if (this.account.project === 'Etelgive') {
-                searchCriteria = { subject: 'RV: SINPEMOVIL', since: startOfMonth };
+                searchCriteria = { subject: 'SINPEMOVIL', since: startOfMonth };
             } else {
-                // Para Multichunches buscamos BN o SINPE
                 searchCriteria = {
-                    or: [
-                        { subject: 'SINPE' },
-                        { subject: 'BN' }
-                    ],
+                    body: 'BN SINPE MOVIL',
                     since: startOfMonth
                 };
             }
@@ -345,12 +439,10 @@ class SinpeWatcher {
             const messages = await this.client.search(searchCriteria);
 
             if (!messages || messages.length === 0) {
-                const filterUsed = this.account.project === 'Etelgive' ? 'RV: SINPEMOVIL' : 'SINPE o BN';
-                console.log(`[IMAP][${this.account.project}] No se encontraron correos con asunto "${filterUsed}" este mes.`);
                 return;
             }
 
-            console.log(`[IMAP][${this.account.project}] Se encontraron ${messages.length} correos para procesar.`);
+            logger.info(`[IMAP][${this.account.project}] Se encontraron ${messages.length} correos para procesar.`);
 
             for (const seq of messages) {
                 const message = await this.client.fetchOne(seq.toString(), { source: true });
@@ -373,27 +465,23 @@ class SinpeWatcher {
         if (transaction) {
             const saved = await saveTransaction(transaction, project);
             if (saved) {
-                console.log(`[SUCCESS][${project}] Transacción guardada: ${transaction.referencia}`);
+                logger.info(`[SUCCESS][${project}] Transacción guardada: ${transaction.referencia}`);
                 const eventData = { ...transaction, proyecto: project };
                 io.emit('new-transaction', eventData);
-                console.log(`[SOCKET.IO][${project}] Evento emitido: ${transaction.referencia}`);
             }
         }
     }
 
     async scanRescan(startDate: Date) {
-        console.log(`[RESCAN][${this.account.project}] Escaneando correos desde ${startDate.toLocaleDateString()}...`);
+        logger.info(`[RESCAN][${this.account.project}] Escaneando correos desde ${startDate.toLocaleDateString()}...`);
         let lock = await this.client.getMailboxLock('INBOX');
         try {
             let searchCriteria: any;
             if (this.account.project === 'Etelgive') {
-                searchCriteria = { subject: 'RV: SINPEMOVIL', since: startDate };
+                searchCriteria = { subject: 'SINPEMOVIL', since: startDate };
             } else {
                 searchCriteria = {
-                    or: [
-                        { subject: 'SINPE' },
-                        { subject: 'BN' }
-                    ],
+                    body: 'BN SINPE MOVIL',
                     since: startDate
                 };
             }
@@ -401,11 +489,8 @@ class SinpeWatcher {
             const messages = await this.client.search(searchCriteria);
 
             if (!messages || messages.length === 0) {
-                console.log(`[RESCAN][${this.account.project}] No se encontraron correos.`);
                 return;
             }
-
-            console.log(`[RESCAN][${this.account.project}] Se encontraron ${messages.length} correos.`);
 
             for (const seq of messages) {
                 const message = await this.client.fetchOne(seq.toString(), { source: true });
@@ -419,14 +504,28 @@ class SinpeWatcher {
     }
 
     async stop() {
+        this.stopHeartbeat();
         try { await this.client.logout(); } catch (e) {}
     }
 }
 
+// Manejo de excepciones no controladas para evitar procesos zombie
+process.on('uncaughtException', async (err) => {
+    logger.error('EXCEPCIÓN NO CONTROLADA (Fatal)', { error: err.message, stack: err.stack });
+    for (const w of watchers) {
+        try { await w.stop(); } catch (e) {}
+    }
+    setTimeout(() => process.exit(1), 1000);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    logger.error('RECHAZO DE PROMESA NO CONTROLADO', { reason: String(reason) });
+});
+
 async function main() {
     const PORT = process.env.PORT || 3001;
     httpServer.listen(PORT, () => {
-        console.log(`[SISTEMA] Servidor listo en puerto ${PORT}`);
+        logger.info(`[SISTEMA] Servidor listo en puerto ${PORT}`);
     });
 
     watchers = config.accounts.map(acc => new SinpeWatcher(acc));
@@ -435,6 +534,7 @@ async function main() {
     }
 
     const shutdown = async () => {
+        logger.info('[SISTEMA] Cerrando servicios...');
         for (const w of watchers) await w.stop();
         process.exit(0);
     };
@@ -443,6 +543,7 @@ async function main() {
 }
 
 main().catch(err => {
-    console.error('[FATAL]', err);
+    logger.error('[FATAL] Error en el proceso principal:', err);
     process.exit(1);
 });
+

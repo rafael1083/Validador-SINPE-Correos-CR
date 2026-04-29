@@ -68,6 +68,12 @@ validador-sinpesXcorreos/
 - **Robust Parsing:** Regex mejorado en `src/parser.ts` (montos, nombres, entidades).
 - **Case-Insensitivity:** Comparaciones remitente/asunto insensibles a mayúsculas.
 
+### Abril 29, 2026 (Sesión Gemini CLI)
+- **BN Multi-Duplication Fix:** Corregido error de duplicación en Multichunches. 
+- **Strict BN Filtering:** El parser ahora requiere estrictamente "BN SINPE MOVIL" en el cuerpo. Se eliminó el formato genérico "BN informa".
+- **IMAP Search Optimization:** Búsqueda IMAP para Multichunches ahora filtra por `body: "BN SINPE MOVIL"`, reduciendo tráfico y procesado innecesario.
+- **Historial Cleaned:** Eliminación masiva de referencias generadas `BNI-` en CSV históricos.
+
 ### Abril 21, 2026 (Sesión Claude Code)
 - **API REST Completa:** 12 endpoints (lectura, escritura, pruebas QA, CSV)
 - **WebSocket Tiempo Real:** Socket.IO para actualización instantánea
