@@ -41,7 +41,7 @@ PARTE 2: PRODUCCION (Windows 10)
 ================================================================================
 
 PASO 1: Descargar cambios desde GitHub
-  - Ejecutar: 2.actualizar_servidor.bat
+  - Ejecutar: actualizar_servidor.bat
 
   Este script hace:
     ✓ Limpia estado local (git reset --hard)
@@ -62,25 +62,16 @@ RESUMEN DE ARCHIVOS .BAT
 ================================================================================
 
 DESARROLLO (Windows 11):
-  1.publicar.bat
+  publicar.bat
     └─ Dev → Main (GitHub)
     └─ Ejecutar cuando hayas hecho cambios
     └─ Antes de: Actualizar servidor
 
 PRODUCCION (Windows 10):
-  2.actualizar_servidor.bat
+  actualizar_servidor.bat
     └─ Main (GitHub) → Local
     └─ Instala + reinicia servidor
     └─ Ejecutar después de publicar en dev
-
-  2.vigilante_produccion.bat
-    └─ Monitor del servidor
-    └─ Opcional: vigilancia automática
-
-OTROS:
-  iniciarBackground.bat
-    └─ Inicia servidor en background
-    └─ Usado por 2.actualizar_servidor.bat
 
 ================================================================================
 FLUJO RECOMENDADO PASO A PASO

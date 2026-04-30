@@ -36,3 +36,15 @@ SINPE Multichunches
 console.log('\n--- TEST EMAIL 3 (Simbolo ¢) ---');
 const res3 = parseSinpeEmail(email3, new Date(), 'Multichunches');
 console.log(JSON.stringify(res3, null, 2));
+
+const email4 = `
+Notificación BN
+-------------------
+BN informa VARIOS Credito a su cuenta XX318-7 por 2,700.00 col en 28/04/2026 13:48. Referencia 82183010498722008
+---—---------------
+SINPE Multichunches
+`;
+
+console.log('\n--- TEST EMAIL 4 (BN informa format) ---');
+const res4 = parseSinpeEmail(email4, new Date(), 'Multichunches');
+console.log(JSON.stringify(res4, null, 2));

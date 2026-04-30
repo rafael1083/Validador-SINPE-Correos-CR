@@ -96,13 +96,14 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
     let all: SinpeTransaction[] = [];
 
     // Incluir sinpes.csv (archivo general antiguo) si no se especifica proyecto o para asegurar historial
-    const pathsToRead = projects.map(p => getCsvPath(p));
+    const pathsToRead = projects.map(p => ({ path: getCsvPath(p), project: p }));
     if (!project) {
-        pathsToRead.push(path.join(dataDir, 'sinpes.csv'));
+        pathsToRead.push({ path: path.join(dataDir, 'sinpes.csv'), project: '' });
     }
 
     logger.info(`[CSV] Leyendo transacciones... paths: ${pathsToRead.length}`);
-    for (const csvPath of pathsToRead) {
+    for (const item of pathsToRead) {
+        const csvPath = item.path;
         if (!fs.existsSync(csvPath)) {
             logger.info(`[CSV] No existe: ${csvPath}`);
             continue;
@@ -119,6 +120,10 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
             const pTransactions = dataLines.map(line => {
                 const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
                 const parts = matches.map(m => m.replace(/^"|"$/g, '').trim());
+                
+                // Inferir proyecto: 1. Columna CSV, 2. Argumento función, 3. Nombre archivo
+                const recordProject = parts[7] || project || item.project || '';
+                
                 return {
                     fecha: parts[0] || '',
                     referencia: parts[1] || '',
@@ -127,7 +132,7 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
                     entidadOrigen: parts[4] || 'Desconocido',
                     monto: parts[5] || '0',
                     motivo: parts[6] || '',
-                    proyecto: parts[7] || project || '',
+                    proyecto: recordProject,
                     estado: parts[8] || ''
                 };
             });
@@ -138,6 +143,7 @@ export async function getAllTransactions(project?: string): Promise<SinpeTransac
     }
     
     // Eliminar duplicados por referencia antes de retornar
+    // Nota: Si hay duplicados con distinto proyecto, se mantiene el último leído.
     const unique = Array.from(new Map(all.map(tx => [tx.referencia, tx])).values());
     return unique.sort((a, b) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime());
 }
