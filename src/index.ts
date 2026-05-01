@@ -431,7 +431,10 @@ class SinpeWatcher {
                 searchCriteria = { subject: 'SINPEMOVIL', since: startOfMonth };
             } else {
                 searchCriteria = {
-                    body: 'BN SINPE MOVIL',
+                    or: [
+                        { body: 'BN SINPE MOVIL' },
+                        { body: 'BN informa' }
+                    ],
                     since: startOfMonth
                 };
             }
@@ -481,7 +484,10 @@ class SinpeWatcher {
                 searchCriteria = { subject: 'SINPEMOVIL', since: startDate };
             } else {
                 searchCriteria = {
-                    body: 'BN SINPE MOVIL',
+                    or: [
+                        { body: 'BN SINPE MOVIL' },
+                        { body: 'BN informa' }
+                    ],
                     since: startDate
                 };
             }

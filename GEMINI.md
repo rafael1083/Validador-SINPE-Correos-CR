@@ -70,12 +70,11 @@ validador-sinpesXcorreos/
 - **Robust Parsing:** Regex mejorado en `src/parser.ts` (montos, nombres, entidades).
 - **Case-Insensitivity:** Comparaciones remitente/asunto insensibles a mayúsculas.
 
-### Abril 29, 2026 (Sesión Gemini CLI - Publicado)
-- **BN Multi-Duplication Fix:** Corregido error de duplicación en Multichunches. 
-- **Strict BN Filtering:** El parser ahora requiere estrictamente "BN SINPE MOVIL" en el cuerpo. Se eliminó el formato genérico "BN informa".
-- **IMAP Search Optimization:** Búsqueda IMAP para Multichunches ahora filtra por `body: "BN SINPE MOVIL"`, reduciendo tráfico y procesado innecesario.
-- **Historial Cleaned:** Eliminación masiva de referencias generadas `BNI-` en CSV históricos.
-- **Publicación:** Cambios sincronizados en ramas `dev` y `main`.
+### Abril 30, 2026 (Sesión Gemini CLI - Diagnóstico y Fix)
+- **BN Parser Softened:** Se restauró el soporte para el formato "BN informa" siempre que sea un "Credito". La restricción previa de requerir estrictamente "BN SINPE MOVIL" estaba causando que se ignoraran transacciones válidas.
+- **Sync Data Loss Fix:** Corregido error en `syncAndCreateCSV` donde se perdían registros si la columna `proyecto` estaba vacía. Ahora se infiere el proyecto desde el nombre del archivo si falta en la línea.
+- **IMAP Connection Monitoring:** Identificados errores `ECONNRESET` frecuentes. El sistema reconecta automáticamente y realiza un `scanRecent` para recuperar correos perdidos durante la desconexión.
+- **Improved Logging:** Las transacciones ahora marcan si vienen de "BN Informa - Crédito" para mejor trazabilidad.
 
 ### Abril 21, 2026 (Sesión Claude Code)
 - **API REST Completa:** 12 endpoints (lectura, escritura, pruebas QA, CSV)

@@ -62,7 +62,11 @@ RESUMEN DE ARCHIVOS .BAT
 ================================================================================
 
 DESARROLLO (Windows 11):
+<<<<<<< HEAD
   publicarDesarrollo.bat
+=======
+  publicar.bat
+>>>>>>> dev
     └─ Dev → Main (GitHub)
     └─ Ejecutar cuando hayas hecho cambios
     └─ Antes de: Actualizar servidor
@@ -73,7 +77,10 @@ PRODUCCION (Windows 10):
     └─ Instala + reinicia servidor
     └─ Ejecutar después de publicar en dev
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 ================================================================================
 FLUJO RECOMENDADO PASO A PASO
 ================================================================================

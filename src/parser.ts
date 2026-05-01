@@ -36,27 +36,37 @@ export function parseSinpeEmail(body: string, emailDate: Date, project: 'Etelgiv
         const clean = body.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
 
         if (project === 'Multichunches') {
-            // Requerir estrictamente "BN SINPE MOVIL" en el cuerpo
-            if (!clean.includes('BN SINPE MOVIL')) {
+            // Requerir "BN SINPE MOVIL" o "BN informa ... Credito"
+            const isBnSinpe = clean.includes('BN SINPE MOVIL');
+            const isBnInformaCredito = /BN informa.*Credito/i.test(clean);
+
+            if (!isBnSinpe && !isBnInformaCredito) {
                 return null;
             }
 
             // Formato 1 (SINPE MOVIL BN): Ha recibido 2700 colones por BN SINPE MOVIL de ALVAREZ BUSTOS MARIA. Varios. Referencia 123
             const bnMonto = clean.match(/Ha\s+recibido\s+(?:¢|colones|colS)?\s*([\d,\.]+)\s*(?:colones|colS)?\s+por\s+BN\s+SINPE\s+MOVIL/i);
-            
             const bnRef = clean.match(/Referencia\s+(\d+)/i);
             const bnNombreMatch = clean.match(/de\s+([^.]+)/i);
             
-            // Concepto: después del nombre y antes de la referencia
-            const conceptoMatch = clean.match(/de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i) 
-                                 || clean.match(/por\s+BN\s+SINPE\s+MOVIL\s+de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i);
+            // Formato 2 (BN informa): BN informa VARIOS Credito a su cuenta XX318-7 por 2,700.00 col en 28/04/2026 13:48. Referencia 123
+            const bnInformaMonto = clean.match(/por\s+([\d,\.]+)\s+(?:col|colones)/i);
+            const bnInformaConcepto = clean.match(/BN\s+informa\s+([^ ]+)/i);
 
-            if (bnRef && bnMonto) {
-                let cleanMonto = bnMonto[1].trim().replace(/\s/g, '');
-                cleanMonto = normalizeMonto(cleanMonto);
+            if (bnRef && (bnMonto || bnInformaMonto)) {
+                const rawMonto = bnMonto ? bnMonto[1] : (bnInformaMonto ? bnInformaMonto[1] : '0');
+                const cleanMonto = normalizeMonto(rawMonto.trim().replace(/\s/g, ''));
                 
                 const nombre = bnNombreMatch ? bnNombreMatch[1].trim() : 'Desconocido';
-                const concepto = conceptoMatch ? conceptoMatch[1].trim() : 'SINPE Multichunches';
+                let concepto = 'SINPE Multichunches';
+                
+                if (isBnSinpe) {
+                    const conceptoMatch = clean.match(/de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i) 
+                                         || clean.match(/por\s+BN\s+SINPE\s+MOVIL\s+de\s+[^.]+\.\s+([^.]+?)\.\s+Referencia/i);
+                    if (conceptoMatch) concepto = conceptoMatch[1].trim();
+                } else if (bnInformaConcepto) {
+                    concepto = bnInformaConcepto[1].trim();
+                }
 
                 return {
                     fecha: emailDate.toISOString(),
@@ -67,7 +77,7 @@ export function parseSinpeEmail(body: string, emailDate: Date, project: 'Etelgiv
                     monto: cleanMonto,
                     motivo: concepto,
                     proyecto: project,
-                    estado: 'Notificación BN'
+                    estado: isBnSinpe ? 'Notificación BN' : 'BN Informa - Crédito'
                 };
             }
         } else {
