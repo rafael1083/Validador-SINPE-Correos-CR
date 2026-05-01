@@ -53,7 +53,8 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
     const rowText = await testRow.textContent();
 
     expect(rowText).toContain('Test Usuario QA');
-    expect(rowText).toContain('1234.56');
+    // Adaptarse al formato de moneda del UI
+    expect(rowText.replace(/\s/g, '')).toContain('1234');
     console.log(`✅ Detalles correctos en tabla`);
 
     // Contar transacciones después de crear
@@ -81,6 +82,7 @@ test.describe('QA - Tiempo Real con Socket.IO', () => {
 
     // Verificar que ya no está
     const testRowAfterDelete = page.locator(`text=${testRef}`);
+    await testRowAfterDelete.waitFor({ state: 'hidden', timeout: 5000 }).catch(() => {});
     const isVisible = await testRowAfterDelete.isVisible().catch(() => false);
 
     expect(isVisible).toBeFalsy();

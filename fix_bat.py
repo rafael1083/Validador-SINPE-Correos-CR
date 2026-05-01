@@ -1,20 +1,10 @@
-@echo off
-setlocal EnableDelayedExpansion
-
-:: Asegurarnos de que el script se ejecute en su propia carpeta (evita errores de System32)
-cd /d "%~dp0"
-
+content = """@echo off
+chcp 65001 >nul
 SET REPO_URL=https://github.com/rafael1083/Validador-SINPE-Correos-CR.git
 
 echo ====================================================
 echo   VALIDADOR SINPE - PUBLICADOR (WIN 11 DEV)
 echo ====================================================
-
-rem 0. Validar e instalar dependencias si faltan
-if not exist "node_modules\" (
-    echo [0/5] Dependencias no encontradas. Instalando...
-    call npm install
-)
 
 rem 1. Ejecutar tests
 echo [1/5] Ejecutando tests...
@@ -55,3 +45,7 @@ echo [EXITO] TODO LISTO EN GITHUB (DEV Y MAIN)
 echo Ahora ve a tu PC Windows 10 y corre 'actualizar_servidor.bat'
 echo ====================================================
 pause
+"""
+
+with open('publicarDesarrollo.bat', 'w', encoding='utf-8', newline='\\r\\n') as f:
+    f.write(content)

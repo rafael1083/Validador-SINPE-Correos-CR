@@ -120,6 +120,18 @@ elmensajero@bancobcr.com,SINPEMOVIL
 
 ---
 
+## 🔄 Flujo de Despliegue (CI/CD Local)
+
+### 1. Desarrollo (Windows 11)
+- Usa `publicarDesarrollo.bat` tras hacer cambios.
+- Este script pasa los tests (`npm test`), crea versiones (`commit`) tanto en `dev` como en `main` conservando el historial (usando `merge`), y sube a GitHub.
+
+### 2. Producción (Windows 10)
+- Usa `actualizar_servidor.bat` para descargar los últimos cambios de `main`.
+- Usa `iniciarProduccion.bat` para limpiar puertos, instalar dependencias y levantar el servidor.
+
+---
+
 ## 📊 Flujo de Datos
 
 1. **IMAP Listener** escucha correos

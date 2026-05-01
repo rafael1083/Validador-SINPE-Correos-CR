@@ -41,7 +41,7 @@ PARTE 2: PRODUCCION (Windows 10)
 ================================================================================
 
 PASO 1: Descargar cambios desde GitHub
-  - Ejecutar: 2.actualizar_servidor.bat
+  - Ejecutar: actualizar_servidor.bat
 
   Este script hace:
     ✓ Limpia estado local (git reset --hard)
@@ -62,25 +62,17 @@ RESUMEN DE ARCHIVOS .BAT
 ================================================================================
 
 DESARROLLO (Windows 11):
-  1.publicar.bat
+  publicarDesarrollo.bat
     └─ Dev → Main (GitHub)
     └─ Ejecutar cuando hayas hecho cambios
     └─ Antes de: Actualizar servidor
 
 PRODUCCION (Windows 10):
-  2.actualizar_servidor.bat
+  actualizar_servidor.bat
     └─ Main (GitHub) → Local
     └─ Instala + reinicia servidor
     └─ Ejecutar después de publicar en dev
 
-  2.vigilante_produccion.bat
-    └─ Monitor del servidor
-    └─ Opcional: vigilancia automática
-
-OTROS:
-  iniciarBackground.bat
-    └─ Inicia servidor en background
-    └─ Usado por 2.actualizar_servidor.bat
 
 ================================================================================
 FLUJO RECOMENDADO PASO A PASO
@@ -90,12 +82,12 @@ EN DESARROLLO (Windows 11):
   1. Editar código
   2. npm run dev (probar)
   3. npm test (validar)
-  4. Doble-click: 1.publicar.bat
+  4. Doble-click: publicarDesarrollo.bat
   5. Esperar confirmación ✅
 
 EN PRODUCCION (Windows 10):
   1. Esperar a que dev termine (5-10 segundos)
-  2. Doble-click: 2.actualizar_servidor.bat
+  2. Doble-click: actualizar_servidor.bat
   3. Esperar a que reinicie (30-60 segundos)
   4. Verificar: http://localhost:3001/api/transactions
   5. Confirmar datos ✅
@@ -113,14 +105,14 @@ TOTAL:        3-7 minutos de inicio a fin
 TROUBLESHOOTING
 ================================================================================
 
-Problema: 1.publicar.bat falla
+Problema: publicarDesarrollo.bat falla
   → Verificar: git status (sin cambios sin commitear)
   → Solución: git add . && git commit antes de ejecutar
 
-Problema: 2.actualizar_servidor.bat falla
+Problema: actualizar_servidor.bat falla
   → Verificar: Conexión a GitHub
   → Verificar: Rama 'main' tiene cambios en GitHub
-  → Solución: Ejecutar 1.publicar.bat de nuevo
+  → Solución: Ejecutar publicarDesarrollo.bat de nuevo
 
 Problema: Servidor no inicia en producción
   → Ver logs en: C:\validador-sinpesXcorreos\data\
@@ -131,8 +123,8 @@ Problema: Servidor no inicia en producción
 NOTAS IMPORTANTES
 ================================================================================
 
-✓ 1.publicar.bat usa merge (seguro, preserva historial)
-✓ 2.actualizar_servidor.bat usa --hard (limpia producción)
+✓ publicarDesarrollo.bat usa merge (seguro, preserva historial)
+✓ actualizar_servidor.bat usa --hard (limpia producción)
 ✓ Siempre publicar desde dev antes de actualizar servidor
 ✓ .gitignore protege: imap.txt, data/*.csv, .env
 ✓ Servidor escucha en puerto 3001

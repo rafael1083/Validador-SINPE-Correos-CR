@@ -53,8 +53,10 @@ validador-sinpesXcorreos/
    - Línea 2 → Multichunches
 2. **Instalar:** `npm install`
 3. **Desarrollo (Hot-Reload):** `npm run dev`
-4. **Producción:** `npm start`
-5. **Tests:** `npm test` (Playwright)
+4. **Tests:** `npm test` (Playwright)
+5. **Flujo de Despliegue:**
+   - **Desarrollo:** Usar `publicarDesarrollo.bat` para versionar (merge de `dev` y `main`) y subir a GitHub.
+   - **Producción:** Usar `iniciarProduccion.bat` para levantar el servidor de forma segura (con limpieza de puertos y persistencia).
 
 ## 📊 Cambios Técnicos Recientes
 
