@@ -25,6 +25,7 @@ for /f "tokens=5" %%a in ('netstat -aon 2^>nul ^| findstr :3001') do (
 timeout /t 2 /nobreak >nul
 
 echo [4/4] Iniciando el servidor en produccion...
+del "%~f0" >nul 2>&1
 echo.
 echo ====================================================
 echo   SERVIDOR ACTUALIZADO Y LISTO
