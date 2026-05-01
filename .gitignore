@@ -28,6 +28,10 @@ build/
 .vscode/
 .idea/
 
+# Scripts de desarrollo (solo Windows 11, no van a produccion)
+publicarDesarrollo.bat
+iniciarDesarrollo.bat
+
 # Scratch files
 test-full-body.ts
 test-multi-body.ts
